@@ -29,6 +29,12 @@ table.compare th:last-child {
   }
 }
 
+.clickable-doc.active {
+  outline: solid #ccc 5px;
+}
+.clickable-doc {
+  cursor: pointer;
+}
 
 ul {
   padding-inline-start: 18px;
@@ -452,7 +458,7 @@ ul li {
     <p class="lead text-center mb-5">С&nbsp;их&nbsp;помощью мы&nbsp;успешно запустили более 200 проектов</p>
 
     <div class="row">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 mb-4">
         <p>Мы&nbsp;специализируемся на&nbsp;продвижении экспертов, и&nbsp;выстроим вам систему привлечения клиентов, используя&nbsp;то, что уже проверено и&nbsp;точно работает.</p>
         <p>Мы&nbsp;подберем подходящую вам проверенную гарантированно работающую стратегию, адаптируем ее&nbsp;под особенности вашего продукта и&nbsp;ваши особенности как эксперта, усилим необходимыми дополнительными инструментами</p>
         <ul>
@@ -462,27 +468,23 @@ ul li {
           <li>10&nbsp;000+ вариантов решений</li>
         </ul>
       </div>
-      <div class="col-12 col-md-6 mt-3">
+      <div class="col-12 col-md-6">
         <div class="row">
           <div class="col-6">
-            <h2 class="mb-0">1</h2>
-            <p class="lead font-weight-bold">&nbsp;&laquo;Монетизируй экспертность&raquo;</p>
-            <p>Подробнее о&nbsp;стратегии</p>
+            <h4 class="mb-2">1. &laquo;Монетизируй экспертность&raquo;</h4>
+            <p>Упакуем экспертность в&nbsp;боксовый продукт, создадим бренд и&nbsp;автоматизируем продажи</p>
           </div>
           <div class="col-6">
-            <h2 class="mb-0">2</h2>
-            <p class="lead font-weight-bold">&nbsp;&laquo;Билл Гейтс&raquo;</p>
-            <p>Подробнее о&nbsp;стратегии</p>
+            <h4 class="mb-2">2. &laquo;Билл Гейтс&raquo;</h4>
+            <p>Создадим бренд компании, автоматизируем и&nbsp;масштабируем продажи</p>
           </div>
           <div class="col-6">
-            <h2 class="mb-0">3</h2>
-            <p class="lead font-weight-bold">&nbsp;&laquo;Тони Роббинс&raquo;</p>
-            <p>Подробнее о&nbsp;стратегии</p>
+            <h4 class="mb-2">3. &laquo;Тони Роббинс&raquo;</h4>
+            <p>Создадим бренд личности и&nbsp;популяризируем его</p>
           </div>
           <div class="col-6">
-            <h2 class="mb-0">4</h2>
-            <p class="lead font-weight-bold">&nbsp;&laquo;Инфобизнесмен&raquo;</p>
-            <p>Подробнее о&nbsp;стратегии</p>
+            <h4 class="mb-2">4. &laquo;Инфобизнесмен&raquo;</h4>
+            <p>Создадим боксовый, упакованный продукт и&nbsp;автоматизируем все процессы: от&nbsp;привлечения трафика до&nbsp;повторных продаж</p>
           </div>
         </div>
       </div>
@@ -492,14 +494,31 @@ ul li {
   </div>
 </div>
 
+<script type="text/javascript">
+$(function() {
+  console.log('hi');
+  $(".clickable-doc").click(function(){
+    $('#doc-top').attr('src', $(this).attr('src'));
+    $('.clickable-doc.active').removeClass('active');
+    $(this).addClass('active');
+  })
+});
+</script>
+
 <div class="block my-5 py-5" id="order">
   <div class="container">
     <h1 class="text-center">Начнем с&nbsp;разработки стратегии продвижения</h1>
     <p class="lead text-center mb-5">Это необходимо, чтобы свести риски к&nbsp;минимуму</p>
 
     <div class="row">
-      <div class="col-12 col-md-6">
-        <img src="/images/docs/finplan.jpg">
+      <div class="col-12 col-md-6 mb-5 pb-2" style="background: #f2f2f2;">
+        <img src="/images/docs/1-min.jpg" id="doc-top">
+        <div class="row">
+          <div class="col"><img src="/images/docs/1-min.jpg" class="clickable-doc active"></div>
+          <div class="col"><img src="/images/docs/2-min.jpg" class="clickable-doc"></div>
+          <div class="col"><img src="/images/docs/3-min.jpg" class="clickable-doc"></div>
+          <div class="col"><img src="/images/docs/4-min.jpg" class="clickable-doc"></div>
+        </div>
       </div>
       <div class="col-12 col-md-6">
         <h2>РАЗРАБОТКА СТРАТЕГИИ ПРОДВИЖЕНИЯ</h2>
