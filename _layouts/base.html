@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICOACH LLC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/main.min.css">
+    <meta name="verify-paysera" content="f5ccd3c22ec85e8f4564e7bebac9b2b0">
+  </head>
+  <body>
+    <header>
+      <div class="container py-3">
+        <div class="row">
+          <div class="col">
+            <img class="pull-left m-t p-t mr-3" src="/images/icoach-logo-site.jpg" width="130" alt="logo">
+            <nobr>{% t global.headline %}</nobr>
+          </div>
+          <div class="col text-right">
+            <a href="tel:+74991124733">+7 499 112 47 33</a><br>
+            <a href="tel:+442080892847">+44 20 8089 2847</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    {{ content }}
+    <div class="block py-5 b-odd">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="{{ site.baseurl }}/about/">{% t pages.about.title %}</a><br>
+            <a href="{{ site.baseurl }}/reviews/">{% t pages.reviews.title %}</a><br>
+            <a href="{{ site.baseurl }}/payment/">{% t pages.payment.title %}</a><br>
+            <a href="{{ site.baseurl }}/service/">{% t pages.service.title %}</a>
+          </div>
+          <div class="col-md-4">
+            <a href="{{ site.baseurl }}/warranty/">{% t pages.warranty.title %}</a><br>
+            <a href="{{ site.baseurl }}/privacy/">{% t pages.privacy.title %}</a><br>
+            <a href="{{ site.baseurl }}/offer/">{% t pages.offer.title %}</a><br>
+          </div>
+          <div class="col-md-4">
+            {% t global.customerservice %} <a href="mailto:mail@icoach.ge">mail@icoach.ge</a>
+            <br>
+            +995 322 885 002
+          </div>
+        </div>
+        <p class="text-center mt-3">
+          {% t footer.descriptor %}
+          <br>{% t footer.lead %}
+          <br>{% t footer.copyright %}
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
