@@ -74,11 +74,12 @@ ul li {
             <li class="lead mt-3">Совместно инвестируем. Делим прибыль 30/70</li>
           </ul>
         </div>
-        <div class="col-md-5 offset-md-1">
+        <div class="col-md-6 mt-3 col-lg-4 offset-lg-1">
           <h3 class="text-center">Заказать стратегию продвижения за&nbsp;$390</h3>
-          <p class="text-center">Это первый обязательный шаг работы с нами<!--br>При оплате на сайте действует специальная цена $349 вместо обычной цены $390--></p>
+          <p class="text-center">Первый обязательный шаг работы<!--br>При оплате на сайте действует специальная цена $349 вместо обычной цены $390--></p>
+          <p class="text-center"><a href="#order" class="btn btn-red btn-lg">Заказать разработку стратегии</a></p>
 
-          <form method="post" class="bg-white border border-danger rounded py-3 px-3" action="http://bot.nickvorobiov.com/order.php" data-toggle="validator">
+          <!--form method="post" class="bg-white border border-danger rounded py-3 px-3" action="http://bot.nickvorobiov.com/order.php" data-toggle="validator">
             <input type="hidden" name="trello-list-id" value="{{ site.form.trello-list-id }}" />
             <input type="hidden" name="redirect" value="{{ site.url }}/ok/" />
             <input type="hidden" name="offer" value="iCoach — {{ site.form.offer}}" />
@@ -100,7 +101,7 @@ ul li {
               <input name="privacy" checked="checked" id="confirm-agreement" type="checkbox" required="required"><small>
               Принимаю <a href="/privacy/" target="_blank">условия</a> обработки персональных данных</small>
             </label>
-          </form>
+          </form-->
         </div>
       </div>
     </div>
@@ -546,7 +547,8 @@ $(function() {
         <div class="row mt-4">
           <div class="col">
             <!--p class="text-center mb-0">При оплате<br> на&nbsp;сайте</p-->
-            <p><button class="btn btn-block btn-red btn-lg">Купить за $390</button></p>
+            <p class="lead text-center mb-0">Стоимость $390</p>
+            <a class="btn btn-red btn-lg mt-0 btn-block" href="https://secure.wayforpay.com/button/b31b600394ff9">Купить</a>
           </div>
           <!--div class="col">
             <p class="text-center mb-0">При покупке<br> через менеджера</p>

@@ -15,7 +15,7 @@
       <div class="container py-3">
         <div class="row">
           <div class="col">
-            <img class="pull-left m-t p-t mr-3" src="/images/icoach-logo-site.jpg" width="130" alt="logo">
+            <a href="{{ site.baseurl }}/"><img class="pull-left m-t p-t mr-3" src="/images/icoach-logo-site.jpg" width="130" alt="logo"></a>
             <nobr>{% t global.headline %}</nobr>
           </div>
           <div class="col text-right">
@@ -30,17 +30,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
+            <a href="{{ site.baseurl }}/">{% t pages.main.title %}</a><br>
             <a href="{{ site.baseurl }}/about/">{% t pages.about.title %}</a><br>
             <a href="{{ site.baseurl }}/reviews/">{% t pages.reviews.title %}</a><br>
-            <a href="{{ site.baseurl }}/payment/">{% t pages.payment.title %}</a><br>
-            <a href="{{ site.baseurl }}/service/">{% t pages.service.title %}</a>
+            <a href="{{ site.baseurl }}/terms/">{% t pages.terms.title %}</a><br>
+            <a href="/contract.pdf">{% t global.contract %}</a>
           </div>
-          <div class="col-md-4">
-            <a href="{{ site.baseurl }}/warranty/">{% t pages.warranty.title %}</a><br>
-            <a href="{{ site.baseurl }}/privacy/">{% t pages.privacy.title %}</a><br>
-            <a href="{{ site.baseurl }}/offer/">{% t pages.offer.title %}</a><br>
-          </div>
-          <div class="col-md-4">
+          <div class="col-md-4 offset-md-4">
             {% t global.customerservice %} <a href="mailto:mail@icoach.ge">mail@icoach.ge</a>
             <br>
             +995 322 885 002
