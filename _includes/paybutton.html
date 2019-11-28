@@ -1,0 +1,21 @@
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "{{ include.amount }}",
+      productName = "{{ include.name }}",
+      productId = "{{ include.id }}";
+    $.getJSON('https://icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('#paybutton-{{ include.id }}').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" id="paybutton-{{ include.id }}" style="display:flex;flex-direction:column;">
+  <input class="btn card-link btn-primary" type="submit" value="Купить за ${{ include.amount }}">
+</form>
