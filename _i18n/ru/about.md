@@ -48,8 +48,8 @@
 Адрес: Georgia, Tbilisi, Didube District, Uznadze Street, No111, F11, B2  
 Телефон: +995 322 885 002  
 Режим работы: понедельник-пятница с 10:00 до 18:00  
-Электронная почта: [mail@digitalmarketing.ge](mailto:mail@digitalmarketing.ge)  
-Свидетельство о регистрации: [http://digitalmarketing.ge/registration.pdf](http://digitalmarketing.ge/registration.pdf)
+Электронная почта: [mail@icoach.ge](mailto:mail@icoach.ge)  
+Свидетельство о регистрации: [http://icoach.ge/registration.pdf](http://icoach.ge/registration.pdf)
 
 ## Банковские реквизиты
 
