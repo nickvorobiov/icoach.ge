@@ -14,7 +14,7 @@
     <div class="col">
       <p>Для партнёров iCoach ${{ include.p }}</p>
       {% assign id = include.id | append: '-partner' %}
-      {% assign name = include.name | append: ' в партнёрстве' %}
+      {% assign name = include.name | append: ' для партнёра' %}
       {% include paybutton.html id=id name=name amount=include.p upfront=include.upfront %}
     </div>
   </div>
