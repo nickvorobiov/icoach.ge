@@ -51,6 +51,6 @@ gulp.task('watch', function() {
   gulp.watch(['./_sass/*.scss'], ['css']);
   gulp.watch([
     '*.md', '*.html', '_layouts/*.html', '_posts/*', 'pages/*', 'order/*', 'portfolio/*', 'index/*', 'tw/*',
-    'images/*', '*.yml', '_includes/*', 'js/*.js', 'ok/*', 'paid/*', 'funnel-plan/*', '**/*.md'
+    'images/*', '*.yml', '_includes/*', 'js/*.js', 'ok/*', 'paid/*', 'funnel-plan/*', '**/*.md', '_i18n/ru/*'
   ], ['jekyll-rebuild']);
 });
