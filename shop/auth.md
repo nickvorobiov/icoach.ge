@@ -20,4 +20,4 @@ lead: Научитесь продавать естественно и орган
 
 # **Сколько стоит**
 
-{% include paybutton.html id="auth" name=page.title amount=720 %}
+{% include payrow.html id="auth" name=page.title amount=720 %}

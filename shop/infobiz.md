@@ -34,13 +34,13 @@ lead: Создадим боксовый, упакованный продукт �
 
 Под ключ $5000
 
-{% include paybutton.html id="infobiz-start-turnkey" name="Формула Инфобиз-Стар под ключ" amount=5000 upfront=3000 %}
+{% include payrow.html id="infobiz-start-turnkey" name="Формула Инфобиз-Стар под ключ" amount=5000 upfront=3000 %}
 
 ---
 
 В партнёрстве $1600 + 30% от прибыли
 
-{% include paybutton.html id="infobiz-start" name="Формула Инфобиз-Старт" amount=1600 upfront=1000 %}
+{% include payrow.html id="infobiz-start" name="Формула Инфобиз-Старт" amount=1600 upfront=1000 %}
 
 ---
 
@@ -70,13 +70,13 @@ lead: Создадим боксовый, упакованный продукт �
 
 Под ключ $12000
 
-{% include paybutton.html id="infobiz-optimal-turnkey" name="Формула Инфобиз-Оптимальный под ключ" amount=12000 upfront=8000 %}
+{% include payrow.html id="infobiz-optimal-turnkey" name="Формула Инфобиз-Оптимальный под ключ" amount=12000 upfront=8000 %}
 
 ---
 
 В партнёрстве $3900 + 30% от прибыли
 
-{% include paybutton.html id="infobiz-optimal" name="Формула Инфобиз-Оптимальный" amount=3900 upfront=2600 %}
+{% include payrow.html id="infobiz-optimal" name="Формула Инфобиз-Оптимальный" amount=3900 upfront=2600 %}
 
 ---
 
@@ -108,10 +108,10 @@ lead: Создадим боксовый, упакованный продукт �
 
 Под ключ $22000
 
-{% include paybutton.html id="infobiz-premium-turnkey" name="Формула Инфобиз-Премиум под ключ" amount=22000 upfront=14000 %}
+{% include payrow.html id="infobiz-premium-turnkey" name="Формула Инфобиз-Премиум под ключ" amount=22000 upfront=14000 %}
 
 ---
 
 В партнёрстве $7200 + 30% от прибыли
 
-{% include paybutton.html id="infobiz-premium" name="Формула Инфобиз-Премиум" amount=7200 upfront=4800 %}
+{% include payrow.html id="infobiz-premium" name="Формула Инфобиз-Премиум" amount=7200 upfront=4800 %}

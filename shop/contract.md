@@ -19,6 +19,6 @@ lead: Составляем текст договора в зависимости
 
 # **Сколько стоит**
 
-Составление договора оферты + письменного договора — $400
+Составление договора оферты + письменного договора
 
-{% include paybutton.html id="contract" name=page.title amount=400 %}
+{% include payrow.html id="contract" name=page.title p=400 t=1000 %}

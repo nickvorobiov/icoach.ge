@@ -20,4 +20,4 @@ lead: Упакуем ваше предложение понятно и прив�
 
 # **Сколько стоит**
 
-{% include paybutton.html id="front" name=page.title amount=390 %}
+{% include payrow.html id="front" name=page.title amount=390 %}

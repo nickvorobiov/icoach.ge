@@ -17,5 +17,10 @@ $(document).ready(function() {
 })
 </script>
 <form method="POST" action="https://secure.wayforpay.com/pay" id="paybutton-{{ include.id }}" style="display:flex;flex-direction:column;">
-  <input class="btn card-link btn-primary" type="submit" value="Купить за ${{ include.amount }}">
+  {% if include.title %}
+    {% assign title = include.title %}
+  {% else %}
+    {% assign title = 'Купить за $' | append: include.amount %}
+  {% endif %}
+  <input class="btn card-link btn-primary" type="submit" value="{{ title }}">
 </form>

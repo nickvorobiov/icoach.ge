@@ -23,13 +23,13 @@ lead: Создадим бренд личности и популяризируе
 
 Под ключ $6600
 
-{% include paybutton.html id="tony-start-turnkey" name="Формула Тони Старт под ключ" amount=6600 upfront=4400 %}
+{% include payrow.html id="tony-start-turnkey" name="Формула Тони Старт под ключ" amount=6600 upfront=4400 %}
 
 ---
 
 В партнёрстве $2200 + 30% от прибыли
 
-{% include paybutton.html id="tony-start" name="Формула Тони Старт" amount=2200 upfront=1450 %}
+{% include payrow.html id="tony-start" name="Формула Тони Старт" amount=2200 upfront=1450 %}
 
 ---
 
@@ -53,13 +53,13 @@ lead: Создадим бренд личности и популяризируе
 
 Под ключ $15000
 
-{% include paybutton.html id="tony-optimal-turnkey" name="Формула Тони Оптимальный под ключ" amount=15000 upfront=10000 %}
+{% include payrow.html id="tony-optimal-turnkey" name="Формула Тони Оптимальный под ключ" amount=15000 upfront=10000 %}
 
 ---
 
 В партнёрстве $4900 + 30% от прибыли
 
-{% include paybutton.html id="tony-optimal" name="Формула Тони Оптимальный" amount=4900 upfront=3200 %}
+{% include payrow.html id="tony-optimal" name="Формула Тони Оптимальный" amount=4900 upfront=3200 %}
 
 ---
 
@@ -92,10 +92,10 @@ lead: Создадим бренд личности и популяризируе
 
 Под ключ $26000
 
-{% include paybutton.html id="tony-premium-turnkey" name="Формула Тони Премиум под ключ" amount=17000 %}
+{% include payrow.html id="tony-premium-turnkey" name="Формула Тони Премиум под ключ" amount=17000 %}
 
 ---
 
 В партнёрстве $8600 + 30% от прибыли
 
-{% include paybutton.html id="tony-premium" name="Формула Тони Премиум" amount=8600 upfront=5700 %}
+{% include payrow.html id="tony-premium" name="Формула Тони Премиум" amount=8600 upfront=5700 %}

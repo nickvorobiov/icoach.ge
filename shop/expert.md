@@ -33,13 +33,13 @@ lead: Упакуем экспертность в боксовый продукт
 
 Под ключ $6000
 
-{% include paybutton.html id="expert-start-turnkey" name="Формула Эксперт Старт под ключ" amount=6000 upfront=4000 %}
+{% include payrow.html id="expert-start-turnkey" name="Формула Эксперт Старт под ключ" amount=6000 upfront=4000 %}
 
 ---
 
 В партнёрстве $1990 + 30% от прибыли
 
-{% include paybutton.html id="expert-start" name="Формула Эксперт Старт" amount=1990 upfront=1300 %}
+{% include payrow.html id="expert-start" name="Формула Эксперт Старт" amount=1990 upfront=1300 %}
 
 ---
 
@@ -69,13 +69,13 @@ lead: Упакуем экспертность в боксовый продукт
 
 Под ключ $12000
 
-{% include paybutton.html id="expert-optimal-turnkey" name="Формула Эксперт Оптимальный под ключ" amount=12000 upfront=8000 %}
+{% include payrow.html id="expert-optimal-turnkey" name="Формула Эксперт Оптимальный под ключ" amount=12000 upfront=8000 %}
 
 ---
 
 В партнёрстве $4000 + 30% от прибыли
 
-{% include paybutton.html id="expert-optimal" name="Формула Эксперт Оптимальный" amount=4000 upfront=2600 %}
+{% include payrow.html id="expert-optimal" name="Формула Эксперт Оптимальный" amount=4000 upfront=2600 %}
 
 ---
 
@@ -106,10 +106,10 @@ lead: Упакуем экспертность в боксовый продукт
 
 Под ключ $19000
 
-{% include paybutton.html id="expert-premium-turnkey" name="Формула Эксперт Премиум под ключ" amount=19000 upfront=12000 %}
+{% include payrow.html id="expert-premium-turnkey" name="Формула Эксперт Премиум под ключ" amount=19000 upfront=12000 %}
 
 ---
 
 В партнёрстве $6250 + 30% от прибыли
 
-{% include paybutton.html id="expert-premium" name="Формула Эксперт Премиум" amount=6250 upfront=4000 %}
+{% include payrow.html id="expert-premium" name="Формула Эксперт Премиум" amount=6250 upfront=4000 %}

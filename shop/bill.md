@@ -34,13 +34,13 @@ lead: Создадим бренд компании, автоматизируем
 
 Под ключ $6000
 
-{% include paybutton.html id="bill-start-turnkey" name="Формула Билл Старт под ключ" amount=6000 upfront=4000 %}
+{% include payrow.html id="bill-start-turnkey" name="Формула Билл Старт под ключ" amount=6000 upfront=4000 %}
 
 ---
 
 В партнёрстве $1990 + 30% от прибыли
 
-{% include paybutton.html id="bill-start" name="Формула Билл Старт" amount=1990 upfront=1300 %}
+{% include payrow.html id="bill-start" name="Формула Билл Старт" amount=1990 upfront=1300 %}
 
 ---
 
@@ -76,13 +76,13 @@ lead: Создадим бренд компании, автоматизируем
 
 Под ключ $15000
 
-{% include paybutton.html id="bill-optimal-turnkey" name="Формула Билл Оптимальный под ключ" amount=15000 upfront=10000 %}
+{% include payrow.html id="bill-optimal-turnkey" name="Формула Билл Оптимальный под ключ" amount=15000 upfront=10000 %}
 
 ---
 
 В партнёрстве $4800 + 30% от прибыли
 
-{% include paybutton.html id="bill-optimal" name="Формула Билл Оптимальный" amount=4800 upfront=3200 %}
+{% include payrow.html id="bill-optimal" name="Формула Билл Оптимальный" amount=4800 upfront=3200 %}
 
 ---
 
@@ -121,10 +121,10 @@ lead: Создадим бренд компании, автоматизируем
 
 Под ключ $24000
 
-{% include paybutton.html id="bill-premium-turnkey" name="Формула Билл Премиум под ключ" amount=24000 upfront=16000 %}
+{% include payrow.html id="bill-premium-turnkey" name="Формула Билл Премиум под ключ" amount=24000 upfront=16000 %}
 
 ---
 
 В партнёрстве $7900 + 30% от прибыли
 
-{% include paybutton.html id="bill-premium" name="Формула Билл Премиум" amount=7900 upfront=5200 %}
+{% include payrow.html id="bill-premium" name="Формула Билл Премиум" amount=7900 upfront=5200 %}
