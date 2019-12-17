@@ -7,7 +7,7 @@ $(document).ready(function() {
       amount = "{{ include.amount }}",
       productName = "{{ include.name }}",
       productId = "{{ include.id }}";
-    $.getJSON('https://icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
       $.each(data, function (key, val) {
         $('.paybutton-{{ include.id }}').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
       });
