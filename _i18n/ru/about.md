@@ -53,8 +53,19 @@
 
 ## Банковские реквизиты
 
+### Для оплаты в долларах США (основная валюта)
+
+USD account  
 Intermediary Bank: Citibank N. A., New York, USA; SWIFT: CITIUS33  
 Account With Institution: Bank of Georgia, SWIFT: BAGAGE22  
 29a Gagarin street, Tbilisi 0160, Georgia  
+Beneficiary: ICOACH LLC  
+Account: GE63BG0000000101191822
+
+### Для оплаты в евро
+
+Euro account  
+Intermediary Bank: Commerzbank, Frankfurt, Germany; SWIFT: COBADEFF  
+Account With Institution: Bank of Georgia, SWIFT: BAGAGE22; 29a Gagarin  street, Tbilisi 0160, Georgia  
 Beneficiary: ICOACH LLC  
 Account: GE63BG0000000101191822
