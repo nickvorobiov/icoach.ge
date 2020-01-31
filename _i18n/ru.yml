@@ -30,3 +30,13 @@ pages:
   shop:
     title: Каталог продуктов
     page_title: Каталог продуктов
+  pay:
+    title: Оплата с помощью Visa/MasterCard
+    page_title: Оплата с помощью Visa/MasterCard
+  lead:
+    title: Ручное добавление лида
+    page_title: Ручное добавление лида
+  privacy:
+    title: Политика конфиденциальности
+    page_title: Политика конфиденциальности
+
