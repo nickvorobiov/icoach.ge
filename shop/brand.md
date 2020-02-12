@@ -21,7 +21,7 @@ lead: Cоздание целостного медийного образа и е
 
 # **Сколько стоит**
 
-{% include payrow.html id="branding-start" name="Брендинг Старт" p=350 t=875 %}
+{% include payrow.html id="branding-start" name="Брендинг Старт" p=350 %}
 
 
 ---
@@ -38,7 +38,7 @@ lead: Cоздание целостного медийного образа и е
 
 # **Сколько стоит**
 
-{% include payrow.html id="branding-optimal" name="Брендинг Оптимальный" p=450 t=1125 %}
+{% include payrow.html id="branding-optimal" name="Брендинг Оптимальный" p=450 %}
 
 ---
 
@@ -59,12 +59,12 @@ lead: Cоздание целостного медийного образа и е
 
 ## Уровень Премиум, полный пакет (6 мес)
 
-{% include payrow.html id="branding-premium-full" name="Брендинг Премиум, 6 мес" p=12500 t=31250 %}
+{% include payrow.html id="branding-premium-full" name="Брендинг Премиум, 6 мес" p=12500 %}
 
 ## Уровень Премиум, настройка и 1-й месяц
 
-{% include payrow.html id="branding-premium-first" name="Брендинг Премиум, первый месяц" p=3500 t=8750 %}
+{% include payrow.html id="branding-premium-first" name="Брендинг Премиум, первый месяц" p=3500 %}
 
 ## Уровень Премиум, ежемесячно
 
-{% include payrow.html id="branding-premium-next" name="Брендинг Премиум, ежемесячно" p=2250 t=5625 %}
+{% include payrow.html id="branding-premium-next" name="Брендинг Премиум, ежемесячно" p=2250 %}

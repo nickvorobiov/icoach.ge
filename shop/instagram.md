@@ -23,7 +23,7 @@ lead: Привлечём подписчиков в ваш Инстаграм и 
 
 ## Сколько стоит
 
-{% include payrow.html id="instagram-pump" name=page.title p=475 t=1190 %}
+{% include payrow.html id="instagram-pump" name=page.title p=475 %}
 
 ---
 
@@ -40,4 +40,4 @@ lead: Привлечём подписчиков в ваш Инстаграм и 
 
 ## Сколько стоит
 
-{% include payrow.html id="instagram-push" name=page.title p=950 t=2375 %}
+{% include payrow.html id="instagram-push" name=page.title p=950 %}

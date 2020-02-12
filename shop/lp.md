@@ -18,7 +18,7 @@ lead: Разработка продающего лендинга для ваше
 
 # **Сколько стоит**
 
-{% include payrow.html id="lp" name=page.title p=1000 t=2500 %}
+{% include payrow.html id="lp" name=page.title p=1000 %}
 
 # **Индивидуальный дизайн лендинга**
 
@@ -39,4 +39,4 @@ lead: Разработка продающего лендинга для ваше
 
 # **Сколько стоит**
 
-{% include payrow.html id="lp-design" name="Дизайн лендинга" p=1800 t=4500 %}
+{% include payrow.html id="lp-design" name="Дизайн лендинга" p=1800 %}

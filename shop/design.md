@@ -24,7 +24,7 @@ lead: Визуальное оформление лендинга и реклам
 
 ## **Сколько стоит**
 
-{% include payrow.html id="design-init" name="Индивидуальный дизайн" p=2500 t=6250 %}
+{% include payrow.html id="design-init" name="Индивидуальный дизайн" p=2500 %}
 
 ---
 
@@ -39,7 +39,7 @@ lead: Визуальное оформление лендинга и реклам
 
 ## **Сколько стоит**
 
-{% include payrow.html id="design-refresh" name="Обновление дизайна" p=950 t=2375 %}
+{% include payrow.html id="design-refresh" name="Обновление дизайна" p=950 %}
 
 ---
 
@@ -60,4 +60,4 @@ lead: Визуальное оформление лендинга и реклам
 
 ## **Сколько стоит**
 
-{% include payrow.html id="design-style" name="Разработка фирменного стиля" p=3250 t=8175 %}
+{% include payrow.html id="design-style" name="Разработка фирменного стиля" p=3250 %}

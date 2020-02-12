@@ -27,13 +27,13 @@ lead: Ежедневное выстраивание доверия с потен
 
 ### 15 публикаций в месяц
 
-{% include payrow.html id="smm15" name="Ведение соцсетей, 15 публикаций" p=1000 t=2500 %}
+{% include payrow.html id="smm15" name="Ведение соцсетей, 15 публикаций" p=1000 %}
 
 ---
 
 ### 30 публикаций в месяц
 
-{% include payrow.html id="smm30" name="Ведение соцсетей, 15 публикаций" p=1500 t=3750 %}
+{% include payrow.html id="smm30" name="Ведение соцсетей, 15 публикаций" p=1500 %}
 
 # Продвижение Youtube
 
@@ -50,4 +50,4 @@ lead: Ежедневное выстраивание доверия с потен
 
 ### 8 видео в месяц
 
-{% include payrow.html id="smm-vid" name="Продвижение Youtube, 8 видео" p=1250 t=3125 %}
+{% include payrow.html id="smm-vid" name="Продвижение Youtube, 8 видео" p=1250 %}

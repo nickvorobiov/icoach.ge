@@ -27,13 +27,13 @@ lead: Продаём дешёвый продукт, быстро решающи�
 
 ### Без дизайна (стандартный шаблон)
 
-{% include payrow.html id="tw-lp" name=page.title p=650 t=1625 %}
+{% include payrow.html id="tw-lp" name=page.title p=650 %}
 
 ---
 
 ### С индивидуальным дизайном
 
-{% include payrow.html id="tw-lp-design" name=page.title p=1500 t=3750 %}
+{% include payrow.html id="tw-lp-design" name=page.title p=1500 %}
 
 ---
 
@@ -55,13 +55,13 @@ lead: Продаём дешёвый продукт, быстро решающи�
 
 ### Без дизайна (стандартный шаблон)
 
-{% include payrow.html id="tw" name=page.title p=1600 t=4000 %}
+{% include payrow.html id="tw" name=page.title p=1600 %}
 
 ---
 
 ### С индивидуальным дизайном
 
-{% include payrow.html id="tw-design" name=page.title p=2600 t=6500 %}
+{% include payrow.html id="tw-design" name=page.title p=2600 %}
 
 # Видео/аудио трипваер
 
@@ -80,10 +80,10 @@ lead: Продаём дешёвый продукт, быстро решающи�
 
 ### Без дизайна (стандартный шаблон)
 
-{% include payrow.html id="tw-av" name=page.title p=750 t=1875 %}
+{% include payrow.html id="tw-av" name=page.title p=750 %}
 
 ---
 
 ### С индивидуальным дизайном
 
-{% include payrow.html id="tw-av-design" name=page.title p=2500 t=6250 %}
+{% include payrow.html id="tw-av-design" name=page.title p=2500 %}

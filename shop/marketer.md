@@ -15,4 +15,4 @@ lead: Онлайн-беседа с одним из лучших маркетол
 
 # **Сколько стоит**
 
-{% include payrow.html id="marketer" name=page.title p=150 t=375 %}
+{% include payrow.html id="marketer" name=page.title p=150 %}

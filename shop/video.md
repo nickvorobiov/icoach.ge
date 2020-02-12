@@ -19,4 +19,4 @@ lead: Видеоролик с вашим участием для лендинг�
 
 # Сколько стоит
 
-{% include payrow.html id="video" name=page.title p=350 t=875 %}
+{% include payrow.html id="video" name=page.title p=350 %}

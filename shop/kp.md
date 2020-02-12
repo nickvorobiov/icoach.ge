@@ -18,4 +18,4 @@ lead: Разработка продающего коммерческого пр�
 
 # **Сколько стоит**
 
-{% include payrow.html id="kp" name=page.title p=800 t=2000 %}
+{% include payrow.html id="kp" name=page.title p=800 %}

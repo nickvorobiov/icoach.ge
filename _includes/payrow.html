@@ -6,10 +6,15 @@
 {% else %}
   <div class="row">
     <div class="col">
-      <p>Полная цена ${{ include.t }}</p>
+      {% if include.t %}
+        {% assign t = include.t %}
+      {% else %}
+        {% assign t = include.p | times: 1.5 | floor %}
+      {% endif %}
+      <p>Полная цена ${{ t }}</p>
       {% assign id = include.id | append: '-turnkey' %}
       {% assign name = include.name | append: ' под ключ' %}
-      {% include paybutton.html id=id name=name amount=include.t %}
+      {% include paybutton.html id=id name=name amount=t %}
     </div>
     <div class="col">
       <p>Для партнёров iCoach ${{ include.p }}</p>

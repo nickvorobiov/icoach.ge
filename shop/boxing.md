@@ -29,7 +29,7 @@ lead: Создадим продукт на основе ваших знаний 
 
 # **Сколько стоит**
 
-{% include payrow.html id="boxing-premium" name="Упаковка Премиум" p=3500 t=8750 %}
+{% include payrow.html id="boxing-premium" name="Упаковка Премиум" p=3500 %}
 
 ---
 
@@ -49,7 +49,7 @@ lead: Создадим продукт на основе ваших знаний 
 
 # **Сколько стоит**
 
-{% include payrow.html id="boxing-optimal" name="Упаковка Оптимальный" p=990 t=2475 %}
+{% include payrow.html id="boxing-optimal" name="Упаковка Оптимальный" p=990 %}
 
 ---
 
@@ -68,4 +68,4 @@ lead: Создадим продукт на основе ваших знаний 
 
 # **Сколько стоит**
 
-{% include payrow.html id="boxing-start" name="Упаковка Старт" p=650 t=1625 %}
+{% include payrow.html id="boxing-start" name="Упаковка Старт" p=650 %}

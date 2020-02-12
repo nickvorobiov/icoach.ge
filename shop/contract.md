@@ -21,4 +21,4 @@ lead: Составляем текст договора в зависимости
 
 Составление договора оферты + письменного договора
 
-{% include payrow.html id="contract" name=page.title p=400 t=1000 %}
+{% include payrow.html id="contract" name=page.title p=400 %}
