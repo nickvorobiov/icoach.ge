@@ -9,20 +9,19 @@ layout: base
 }  
 </style>
 
-<div class="block b-odd py-5">
-  <div class="container py-5">
+<div class="section bg-brown">
+  <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h1>
-          {{ page.title }}
-        </h1>
+        <h1 class="title-w-circle circle-brown color-white"><span>{{ page.title }}</span></h1>
         {% if page.lead %}
-        <p class="lead">{{ page.lead }}</p>
+          <p class="color-white">{{ page.lead }}</p>
         {% endif %}
       </div>
     </div>
   </div>
 </div>
+
 <div class="block py-5 page-content">
   <div class="container">
     <div class="row">

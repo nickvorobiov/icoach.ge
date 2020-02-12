@@ -1,1041 +1,648 @@
-<style type="text/css">
-  p.lead {font-size: 1.5rem;}
-  .huge {font-size: 4rem; font-weight: bold;}
-  .bg-sad {background-color: #e8e8e8;}
-  @media (max-width: 991px) {
-    table.compare {
-      font-size: 85%;
-    }
-  }
-  table.compare th, table.compare td:not(:first-child) {text-align: center;}
-  table.compare td.ok {
-    background-color: rgb(40,167,69,.25)!important;
-  }
-  table.compare td:last-child, table.compare th:last-child {
-    border-left: solid rgb(40,167,69,.7) 2px;
-    border-right: solid rgb(40,167,69,.7) 2px;
-    background-color: rgb(40,167,69,.4)!important;
-  }
-  table.compare tr:last-child td:last-child {
-    border-bottom: solid rgb(40,167,69,.7) 2px;
-  }
-  table.compare th:last-child {
-    border-top: solid rgb(40,167,69,.7) 2px;
-  }
-
-  @media (max-width: 767px) {
-    table.case {
-      font-size: 85%;
-    }
-  }
-
-  .clickable-doc.active {
-    outline: solid #ccc 5px;
-  }
-  .clickable-doc {
-    cursor: pointer;
-  }
-
-  ul {
-    padding-inline-start: 18px;
-  }
-  ul li {
-    margin-bottom: 0.3rem!important;
-  }
-
-  ul.nobullet {
-    padding-inline-start: 0;
-    list-style-type: none;
-  }
-
-  @media (max-width: 575px) {
-    ul.nobullet-xs {
-      padding-inline-start: 0;
-      list-style-type: none;
-    }
-    ul.nobullet-xs li {
-      margin-bottom: 0.6rem!important;
-    }
-  }
-
-  .embed-responsive-9by16::before{ padding-top:177.7777777778% }
-</style>
-
-<nav class="site-header py-1 d-none d-lg-block" style="background-color: rgba(0, 0, 0, .085);">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#expert">Экспертам и тренерам</a>
-    <a class="py-2" href="#case">Кейсы</a>
-    <a class="py-2" href="#terms">Приводим клиентов</a>
-    <a class="py-2" href="#warranty">Тройная гарантия</a>
-    <a class="py-2" href="#order">Разработка стратегии</a>
-    <a class="py-2" href="#about">О компании</a>
-    <a class="py-2" href="#reviews">Отзывы</a>
-  </div>
-</nav>
-
-<div class="block b-odd py-5">
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1 class="d-none d-xl-block" style="font-size: 42px">ПРОДВИГАЕМ ЭКСПЕРТОВ<br>на&nbsp;партнерских условиях</h1>
-        <h1 class="d-none d-lg-block d-xl-none">ПРОДВИГАЕМ ЭКСПЕРТОВ<br>на&nbsp;партнерских условиях</h1>
-        <h1 class="d-block d-lg-none text-center">ПРОДВИГАЕМ ЭКСПЕРТОВ<br>на&nbsp;партнерских условиях</h1>
-        <ul class="my-5">
-          <li class="lead mt-3">Помогаем монетизировать знания тренерам, коучам, экспертам</li>
-          <li class="lead mt-3">Выстраиваем систему привлечения клиентов на&nbsp;тренинги, курсы, консультации, услуги онлайн и&nbsp;офлайн</li>
-          <li class="lead mt-3">Совместно инвестируем. Делим прибыль 30/70</li>
-        </ul>
-      </div>
-      <div class="mt-3 col-lg-4 offset-lg-1">
-        <h3 class="text-center">Заказать стратегию продвижения за&nbsp;$390</h3>
-        <p class="text-center">Первый обязательный шаг работы<!--br>При оплате на сайте действует специальная цена $349 вместо обычной цены $390--></p>
-        <p class="text-center"><a href="#order" class="btn btn-red btn-lg">Заказать разработку стратегии</a></p>
-
-        <!--form method="post" class="bg-white border border-danger rounded py-3 px-3" action="http://bot.nickvorobiov.com/order.php" data-toggle="validator">
-          <input type="hidden" name="trello-list-id" value="{{ site.form.trello-list-id }}" />
-          <input type="hidden" name="redirect" value="{{ site.url }}/ok/" />
-          <input type="hidden" name="offer" value="iCoach — {{ site.form.offer}}" />
-          <input type="hidden" name="traffic_source" />
-          <input type="hidden" name="roistat" />
-          <div class="help-block with-errors"></div>
-          <div class="form-group">
-            <label for="input-name" class="control-label">Имя Фамилия</label>
-            <input id="input-name" required="required" name="name" type="text" class="form-control" placeholder="Иван Иванов">
-            <div class="help-block with-errors"></div>
-          </div>
-          <div class="form-group">
-            <label for="input-phone" class="control-label">Телефон</label>
-            <input id="input-phone" name="phone" type="text" class="form-control" placeholder="+7 (987) 654-32-10">
-            <div class="help-block with-errors"></div>
-          </div>
-          <button type="submit" class="btn btn-red btn-block b-promo__button">Перейти к оплате</button>
-          <label class="agreement_label">
-            <input name="privacy" checked="checked" id="confirm-agreement" type="checkbox" required="required"><small>
-            Принимаю <a href="/privacy/" target="_blank">условия</a> обработки персональных данных</small>
-          </label>
-        </form-->
-      </div>
+  <header id="header">
+    <div class="container">
+      <nav class="navigation">
+        <button class="hamburger" type="button" id="toggle-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="logo"><img src="/static/img/logo.png" alt="Icoach"></div>
+        <div class="menu-main-wrap" id="menu-main">
+          <ul class="menu-main">
+            <li><a class="menu-main__link" href="index.html#s-results">Кейсы</a></li>
+            <li><a class="menu-main__link" href="index.html#s-income">Партнерство</a></li>
+            <li><a class="menu-main__link" href="index.html#s-specialization">Гарантия</a></li>
+            <li><a class="menu-main__link" href="index.html#s-strategy">Разработка стратегии</a></li>
+            <li><a class="menu-main__link" href="index.html#s-testimonials">Отзывы</a></li>
+          </ul>
+        </div>
+        <div class="navigation__phones">
+          <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+          <a href="tel:+442080892847">+44 20 8089 2847</a>
+        </div>
+      </nav>
     </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5 b-desire">
-  <div class="container">
-    <h1 class="text-center">Вы&nbsp;состоялись как&nbsp;эксперт</h1>
-    <p class="lead text-center mb-5">Вы&nbsp;успешно продаете, клиенты рекомендуют&nbsp;вас</p>
-
-    <!-- desktop -->
-
-    <div class="d-none d-md-block">
-      <div class="row">
-        <div class="col-4">
-          <h2>Обучаете</h2>
-        </div>
-        <div class="col-4">
-          <h2>Консультируете</h2>
-        </div>
-        <div class="col-4">
-          <h2>Оказываете услуги</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <p>Проводите групповые тренинги, семинары, индивидуальные сессии. Развиваете личный бренд, ведете соц. сети, планируете запускать новый продукт или масштабировать существующий</p>
-        </div>
-        <div class="col-4">
-          <p>Ведете живые и&nbsp;скайп консультации, помогая клиентам решать их&nbsp;личные или семейные проблемы, либо проблемы, связанные с&nbsp;развитием бизнеса</p>
-        </div>
-        <div class="col-4">
-          <p>Являетесь специалистом в&nbsp;своей области и&nbsp;помогаете людям и&nbsp;компаниям, решая их&nbsp;проблемы и&nbsp;закрывая потребности</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <h2>и хотите</h2>
-          <ul>
-            <li>Выйти в&nbsp;онлайн и&nbsp;обучать дистанционно</li>
-            <li>Получать больше клиентов онлайн</li>
-            <li>Больше живых тренингов (в&nbsp;своем и&nbsp;других городах)</li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <h2>и хотите</h2>
-          <ul>
-            <li>Больше клиентов на&nbsp;консалтинг</li>
-            <li>Монетизировать подписчиков</li>
-            <li>Начать обучать вживую</li>
-            <li>Запустить онлайн курсы</li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <h2>и хотите</h2>
-          <ul>
-            <li>Больше клиентов на&nbsp;услугу</li>
-            <li>Начать платно консультировать</li>
-            <li>Начать обучать онлайн</li>
-            <li>Начать вести живые тренинги</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- mobile -->
-
-    <div class="d-md-none">
-      <div class="row mb-4">
-        <div class="col-sm-6">
-          <h2>Обучаете</h2>
-          <p>Проводите групповые тренинги, семинары, индивидуальные сессии. Развиваете личный бренд, ведете соц. сети, планируете запускать новый продукт или масштабировать существующий</p>
-        </div>
-        <div class="col-sm-6">
-          <h2>и хотите</h2>
-          <ul>
-            <li>Выйти в&nbsp;онлайн и&nbsp;обучать дистанционно</li>
-            <li>Получать больше клиентов онлайн</li>
-            <li>Больше живых тренингов (в&nbsp;своем и&nbsp;других городах)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col-sm-6">
-          <h2>Консультируете</h2>
-          <p>Ведете живые и&nbsp;скайп консультации, помогая клиентам решать их&nbsp;личные или семейные проблемы, либо проблемы, связанные с&nbsp;развитием бизнеса</p>
-        </div>
-        <div class="col-sm-6">
-          <h2>и хотите</h2>
-          <ul>
-            <li>Больше клиентов на&nbsp;консалтинг</li>
-            <li>Монетизировать подписчиков</li>
-            <li>Начать обучать вживую</li>
-            <li>Запустить онлайн курсы</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col-sm-6">
-          <h2>Оказываете услуги</h2>
-          <p>Являетесь специалистом в&nbsp;своей области и&nbsp;помогаете людям и&nbsp;компаниям, решая их&nbsp;проблемы и&nbsp;закрывая потребности</p>
-        </div>
-        <div class="col-sm-6">
-          <h2>и хотите</h2>
-          <ul>
-            <li>Больше клиентов на&nbsp;услугу</li>
-            <li>Начать платно консультировать</li>
-            <li>Начать обучать онлайн</li>
-            <li>Начать вести живые тренинги</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5 b-odd">
-  <div class="container py-5">
-    <div class="col-xl-10 offset-xl-1">
-      <div class="row">
-        <h1 class="text-center">Вы&nbsp;хотите большего числа клиентов, дальнейший рост как эксперта и&nbsp;больше свободного времени</h1>
-        <p class="lead text-center mb-5">Вы&nbsp;понимаете — чтобы зарабатывать больше, нужно тратить меньше времени на&nbsp;задачи, в&nbsp;которых вы&nbsp;не&nbsp;эксперт</p>
-        <p class="lead text-center mb-5">Вы&nbsp;пытались:</p>
-      </div>
-    </div>
-
-    <!-- desktop -->
-    <div class="d-none d-md-block">
-      <div class="row">
-        <div class="col-xl-10 offset-xl-1">
-          <div class="row">
-            <div class="col-6">
-              <h2>Продвигаться<br>самостоятельно</h2>
+  </header>
+  <main class="main">
+    <section id="s-banner">
+      <div class="container">
+        <div class="banner">
+          <div class="banner__suptitle">Агентство digital-маркетинга</div>
+          <h1 class="title-size-1 banner__title title-w-circle circle-brown">
+            <span>Возьмём ваш маркетинг на&nbsp;себя</span>
+          </h1>
+          <h2 class="banner__subtitle">Строим современные и&nbsp;надёжные системы привлечения клиентов с&nbsp;гарантией</h2>
+          <a class="button_red banner__button font-bold" href="index.html#s-strategy" data-smooth>Заказать</a>
+          <div class="features">
+            <div class="feature">
+              <div class="feature__icon"><img src="/static/img/bars.svg" alt="Графы"></div>
+              <p class="feature__text">Рассчитаем окупаемость заранее</p>
             </div>
-            <div class="col-6">
-              <h2>Нанимать<br>фрилансеров</h2>
+            <div class="feature">
+              <div class="feature__icon"><img src="/static/img/coin.svg" alt="Монета"></div>
+              <p class="feature__text">
+                Переделаем за&nbsp;свой счёт, если не&nbsp;заработает</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><img src="/static/img/moneybag.svg" alt="Мешок с деньгами"></div>
+              <p class="feature__text">
+                Предоплата&nbsp;30%, остальное когда получите прибыль</p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <ul>
-                <li>Тратите время и&nbsp;деньги на&nbsp;курсы по&nbsp;продвижению вместо дальнейшего развития своих сильных сторон</li>
-                <li>Вы&nbsp;тратите время на&nbsp;то, что не&nbsp;умеете</li>
-                <li>Теряете деньги, работая не&nbsp;как эксперт</li>
+        </div>
+      </div>
+    </section>
+    <section id="s-business">
+      <div class="container">
+        <div class="business">
+          <div class="business__content">
+            <h2 class="business__title circle-gray title-w-circle">
+              <span>Ваш бизнес неплохо работает</span>
+            </h2>
+            <p class="business__text">Вы&nbsp;успешно продаете, клиенты рекомендуют вас</p>
+          </div>
+          <div class="business__features">
+            <ul class="business__features-list">
+              <li>Продажи дают хорошую прибыль</li>
+              <li>Клиенты остаются довольными</li>
+              <li>Готовы инвестировать в&nbsp;дальнейший рост</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-clients">
+      <div class="container">
+        <div class="clients">
+          <div class="clients__content">
+            <h2 class="clients__title">Вы&nbsp;хотите больше клиентов, прибыли и&nbsp;свободного времени</h2>
+            <p class="clients__text">Клиентов иногда больше, иногда меньше, но&nbsp;никогда не&nbsp;бывает слишком много</p>
+          </div>
+          <div class="attraction">
+            <h3 class="attraction__header">
+              <span class="attraction__header-text">
+                <span>Привлечение клиентов пора:</span>
+              </span>
+            </h3>
+            <div class="attraction__list">
+              <div class="step">
+                <div class="step__number">01</div>
+                <div class="step__content">
+                  <div class="step__title">Систематизировать</div>
+                  <div class="step__text">Сделать приток новых клиентов постоянным и&nbsp;стабильным</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__number">02</div>
+                <div class="step__content">
+                  <div class="step__title">Масштабировать</div>
+                  <div class="step__text">Получать в&nbsp;несколько раз больше заказов</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__number">03</div>
+                <div class="step__content">
+                  <div class="step__title">Делегировать</div>
+                  <div class="step__text">Сделать это чужими руками и&nbsp;получить больше свободного времени</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-achieve">
+      <div class="container">
+        <div class="achieve">
+          <div class="achieve__header">Вам нужен надёжный партнёр, который возьмёт привлечение клиентов на&nbsp;себя и&nbsp;гарантирует результат</div>
+          <div class="achieve__content">
+            <h2 class="achieve__content-title">Мы&nbsp;поможем достичь цели</h2>
+            <div class="achieve__content-text">Возможен партнёрский вариант сотрудничества с&nbsp;оплатой разработки по&nbsp;себестоимости</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-examples">
+      <div class="container">
+        <div class="examples">
+          <h2 class="examples__header circle-gray title-w-circle circle-gray--small">
+            <span>Примеры работающих систем привлечения клиентов</span>
+          </h2>
+          <div class="examples__content-wrap">
+            <div class="examples__content">
+              <div class="example">
+                <div class="example__title">Продажа услуг через консультацию</div>
+                <div class="example__text">Цена под ключ&nbsp;&mdash;
+                  <span class="red font-bold">$5100</span>. В&nbsp;партнёрстве&nbsp;&mdash;
+                  <span class="font-bold">$1700</span>
+                  + 30% прибыли</div>
+                <div class="example__image img-small"><img class="js-lazy" src="index.html" alt="Консультация" data-src="/static/img/schema_1.jpg" width="700" height="360"></div>
+              </div>
+              <div class="example">
+                <div class="example__title">Сбор онлайн-тренинга через вебинар</div>
+                <p class="example__text">Цена под ключ&nbsp;&mdash;
+                  <span class="red font-bold">$7500</span>. В&nbsp;партнёрстве&nbsp;&mdash;
+                  <span class="font-bold">$2500</span>
+                  + 30% прибыли</p>
+                <div class="example__image">
+                  <img class="js-lazy" src="index.html" alt="вебинар" data-src="/static/img/schema_2.jpg" width="924" height="360"></div>
+              </div>
+              <div class="example">
+                <div class="example__title">Автоматические продажи обучающего курса</div>
+                <p class="example__text">Цена под ключ&nbsp;&mdash;
+                  <span class="red font-bold">$12900</span>. В&nbsp;партнёрстве&nbsp;&mdash;
+                  <span class="font-bold">$4300</span>
+                  + 30% прибыли</p>
+                <div class="example__image"><img class="js-lazy" src="index.html" alt="Автопродажи" data-src="/static/img/schema_3.jpg" width="924" height="360"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="components">
+          <h2 class="components__header">Подберём нужные компоненты и&nbsp;решим поставленные задачи</h2>
+          <div class="components__content-wrap">
+            <div class="components__content">
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/like.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Соцсети</div>
+                  <div class="component__text">Познакомиться и&nbsp;прокачать узнаваемость</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/magnet.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Лидмагнит</div>
+                  <div class="component__text">Активировать потребность, прокачать авторитет</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/chat.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Чатбот</div>
+                  <div class="component__text">Квалифицировать, уточнить потребности, получить контакты</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/message.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Прогревочная рассылка</div>
+                  <div class="component__text">Создать доверие и&nbsp;подготовить к&nbsp;покупке</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/target.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Трипваер</div>
+                  <div class="component__text">Сделать первую продажу, превзойти ожидания и&nbsp;создать фаната</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/money.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Коммерческое предложение</div>
+                  <div class="component__text">Закрепить основные смыслы в&nbsp;уме клиента</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/scale.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Лидменеджер</div>
+                  <div class="component__text">Отфильтровать мусорный трафик и&nbsp;удержать клиента</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/shake.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Продающая консультация</div>
+                  <div class="component__text">Заключить сделку</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/computer.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Продающий лендинг</div>
+                  <div class="component__text">Презентовать основной продукт</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/head.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Менеджер по&nbsp;продажам</div>
+                  <div class="component__text">Закрыть возражения и&nbsp;довести до&nbsp;покупки</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/note.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Договор</div>
+                  <div class="component__text">Зафиксировать все обещания и&nbsp;защититься от&nbsp;претензий</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/wallet.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Платёжная система</div>
+                  <div class="component__text">Принимать оплату картами онлайн</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/webcam.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Вебинар</div>
+                  <div class="component__text">Масштабировать основателя чтобы хватило на&nbsp;всех клиентов</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/education.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Онлайн-курс</div>
+                  <div class="component__text">Упаковать знания</div>
+                </div>
+              </div>
+              <div class="component">
+                <div class="component__icon"><img src="/static/img/sound.svg" alt=""></div>
+                <div class="component__body">
+                  <div class="component__title">Реклама в&nbsp;соцсетях</div>
+                  <div class="component__text">Наполнить воронку трафиком</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-schedule">
+      <div class="container">
+        <div class="schedule">
+          <h2 class="schedule__header title-w-circle circle-gray circle-gray--small">
+            <span>Как всё будет происходить</span>
+          </h2>
+          <div class="schedule__list">
+            <div class="stage">
+              <div class="stage__number">01</div>
+              <div class="stage__content">
+                <div class="stage__header">
+                  <span>Проектирование системы&nbsp;</span>
+                  <span class="gray">&mdash; 7&nbsp;дней</span>
+                </div>
+                <div class="stage__text">Первый обязательный шаг для начала работы.</div>
+                <div class="stage__text">
+                  <span class="red font-bold">Результат:
+                  </span>
+                  <span>готовый проект, смета работ, расчёт окупаемости.</span>
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage__number">02</div>
+              <div class="stage__content">
+                <div class="stage__header">
+                  <span>Разработка&nbsp;</span>
+                  <span class="gray">&mdash; 30&nbsp;дней</span>
+                </div>
+                <div class="stage__text">Первый обязательный шаг для начала работы.</div>
+                <div class="stage__text">
+                  <span class="red font-bold">Результат:
+                  </span>
+                  <span>готовый проект, смета работ, расчёт окупаемости.</span>
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage__number">03</div>
+              <div class="stage__content">
+                <div class="stage__header">
+                  <span>Тестирование</span>
+                  <span class="gray">&nbsp;&mdash; 10&nbsp;дней</span>
+                </div>
+                <div class="stage__text">Запускаем трафик и&nbsp;выбираем самые эффективные аудитории, тексты и&nbsp;баннеры.</div>
+                <div class="stage__text">
+                  <span class="red font-bold">Результат:
+                  </span>
+                  <span>проверенная работающая воронка продаж и&nbsp;первые клиенты.</span>
+                </div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage__number">04</div>
+              <div class="stage__content">
+                <div class="stage__header">
+                  <span>Эксплуатация</span>
+                  <span class="gray">&nbsp;&mdash; продолжаем пока нужны новые клиенты</span>
+                </div>
+                <div class="stage__text">Ведём и&nbsp;постоянно оптимизируем рекламные кампании, ведём и&nbsp;продвигаем соцсети, обрабатываем заявки и&nbsp;совершаем продажи.</div>
+                <div class="stage__text">
+                  <span class="red font-bold">Результат:
+                  </span>
+                  <span>прибыль.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-protection">
+      <div class="container">
+        <div class="protection">
+          <div class="protection__header">
+            <h2 class="protection__title">Защита от&nbsp;неудачных запусков</h2>
+            <div class="protection__subtitle">При выходе на&nbsp;новый рынок или запуске нового продукта снижаем риски с&nbsp;помощью двух дополнительных компонентов во&nbsp;время первого этапа</div>
+          </div>
+          <div class="protection-list">
+            <div class="protection-list__item">
+              <div class="protection-list__icon"><img src="/static/img/research.svg" alt="Исследования"></div>
+              <div class="protection-list__content">
+                <div class="protection-list__title">Исследование рынка</div>
+                <div class="protection-list__text">Проводим глубокий анализ ниши, основных конкурентов и&nbsp;их&nbsp;предложений, получаем точное понимание целевой аудитории, и&nbsp;выбираем наилучшее позиционирование.</div>
+              </div>
+            </div>
+            <div class="protection-list__item">
+              <div class="protection-list__icon"><img src="/static/img/search.svg" alt="Поиск"></div>
+              <div class="protection-list__content">
+                <div class="protection-list__title">Сплит-тест</div>
+                <div class="protection-list__text">Проводим быструю и&nbsp;короткую тестовую рекламную кампанию чтобы выбрать самый перспективный варианта продукта или первого шага ещё до&nbsp;начала разработки основной воронки.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-strategy">
+      <div class="container">
+        <div class="strategy">
+          <div class="strategy__header">
+            <h2 class="strategy__title title-w-circle circle-gray">
+              <span>Начнем с&nbsp;разработки стратегии продвижения</span>
+            </h2>
+            <div class="strategy__subtitle">Это необходимо, чтобы свести риски к&nbsp;минимуму</div>
+          </div>
+          <div class="strategy__plan">
+            <div class="plan-tabs">
+              <div class="plan-tabs__controls" id="tabs-controls">
+                <div class="plan-tabs__controls-item js-tab js-tab-active"><img class="js-lazy" src="index.html" alt="стратегия" data-src="/static/img/tab_1.jpg" data-tab-large="static/img/tab_1-big.jpg"></div>
+                <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="index.html" alt="стратегия" data-src="/static/img/tab_2.jpg" data-tab-large="static/img/tab_2-big.jpg"></div>
+                <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="index.html" alt="стратегия" data-src="/static/img/tab_3.jpg" data-tab-large="static/img/tab_3-big.jpg"></div>
+                <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="index.html" alt="стратегия" data-src="/static/img/tab_4.jpg" data-tab-large="static/img/tab_4-big.jpg"></div>
+              </div>
+              <div class="plan-tabs__content"><img class="js-lazy" src="index.html" alt="стратегия" data-src="/static/img/tab_1.jpg" data-zoom="static/img/tab_1-big.jpg" width="413" height="554" id="tab-picked"></div>
+              <div class="plan-tabs__scale"></div>
+            </div>
+            <div class="plan">
+              <h3 class="plan__title">В&nbsp;стратегию входит:</h3>
+              <div class="plan__subtitle">Пошаговый план, как привлекать больше клиентов</div>
+              <ul class="plan__list">
+                <li>Разрабатываем концепт (УТП + логика презентации&nbsp;/ позиционирование)</li>
+                <li>Находим платежеспособную целевую аудиторию</li>
+                <li>Создаем логику презентации проекта для потенциального клиента</li>
+                <li>Разрабатываем коммуникационную стратегию и&nbsp;воронку продаж</li>
+              </ul>
+              <div class="plan__subtitle">Смета работ</div>
+              <ul class="plan__list">
+                <li>Подбор необходимых инструментов</li>
+                <li>Три варианта стоимости: эконом, стандарт, премиум</li>
+              </ul>
+              <div class="plan__subtitle">Пошаговый план, как привлекать больше клиентов</div>
+              <ul class="plan__list">
+                <li>Финансовый план запуска</li>
+                <li>Расчет рекламного бюджета</li>
+                <li>Подбор жизнеспособной бизнес-модели</li>
+                <li>Анализ рисков и&nbsp;развития негативного сценария</li>
+              </ul>
+              <button class="button_red plan__button" type="button">
+                <span>Купить сейчас</span>
+                <span class="plan__button--amphisized">$390</span>
+              </button>
+            </div>
+          </div>
+          <div class="advantages-wrap">
+            <div class="advantages">
+              <div class="advantage">
+                <div class="advantage__icon"><img src="/static/img/check.svg" alt=""></div>
+                <div class="advantage__text">Реализовать стратегию можете своими силами или нашими</div>
+              </div>
+              <div class="advantage">
+                <div class="advantage__icon"><img src="/static/img/check.svg" alt=""></div>
+                <div class="advantage__text">100% запусков с&nbsp;нами начинаются с&nbsp;этого шага</div>
+              </div>
+              <div class="advantage">
+                <div class="advantage__icon"><img src="/static/img/check.svg" alt=""></div>
+                <div class="advantage__text">98% клиентов доверяют реализацию стратегии нам</div>
+              </div>
+              <div class="advantage">
+                <div class="advantage__icon"><img src="/static/img/check.svg" alt=""></div>
+                <div class="advantage__text">$2890&nbsp;&mdash; средняя экономия клиента на&nbsp;дальнейшем продвижении</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-income">
+      <div class="container">
+        <div class="income">
+          <h2 class="income__header">
+            <span class="income__title title-w-circle circle-gray text-align-left">
+              <span>Мы&nbsp;получили прибыль</span>
+            </span>
+            <span class="income__title text-align-right">для
+              <span class="red">200+</span>
+              партнеров</span>
+          </h2>
+          <div class="income__subtitle">Имеем опыт в&nbsp;десятках ниш. Основные:</div>
+          <div class="income__lists-wrap">
+            <div class="income__lists">
+              <ul class="income-list">
+                <li>Продажи</li>
+                <li>Менеджмент</li>
+                <li>Управление бизнесом</li>
+                <li>Недвижимость</li>
+                <li>Инвестиции</li>
+              </ul>
+              <ul class="income-list">
+                <li>Психология</li>
+                <li>Отношения</li>
+                <li>Лайф коучинг</li>
+                <li>Личностный рост</li>
+                <li>Иностранные языки</li>
+              </ul>
+              <ul class="income-list">
+                <li>Сетевой бизнес</li>
+                <li>Мода и&nbsp;стиль</li>
+                <li>Красота</li>
+                <li>Воспитание детей</li>
+                <li>Знакомства</li>
+              </ul>
+              <ul class="income-list">
+                <li>Фитнес</li>
+                <li>Единоборства</li>
+                <li>Медитации</li>
+                <li>Похудение</li>
+                <li>Массаж</li>
               </ul>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Теряете время на&nbsp;сбор команды, управление и&nbsp;контроль</li>
-                <li>Теряете деньги на&nbsp;непрофессионалов и&nbsp;мошенников</li>
-                <li>Теряете деньги и&nbsp;время на&nbsp;поиски рабочей модели продвижения</li>
-              </ul>
+          </div>
+        </div>
+        <div class="results" id="s-results">
+          <h2 class="results__header">Мы&nbsp;гордимся результатами своих клиентов</h2>
+          <div class="result__content-wrap">
+            <div class="results__content">
+              <div class="result-card">
+                <div class="result-card__inner"><img class="result-card__image js-lazy" src="index.html" alt="Михаил" data-src="/static/img/results_1.jpg" width="224" height="224">
+                  <div class="result-card__content">
+                    <div class="result-card__name">Михаил</div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head gray">Ниша:</div>
+                      <div class="result-card__cell-body">Обучение массажу</div>
+                    </div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head gray">Формат</div>
+                      <div class="result-card__cell-body">Тренинги в&nbsp;Москве, Питере, Калининграде и&nbsp;Архангельске</div>
+                    </div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head red">Результат</div>
+                      <div class="result-card__cell-body">Собрали 5&nbsp;тренингов с&nbsp;прибылью в&nbsp;1&nbsp;000&nbsp;000 рублей</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-card">
+                <div class="result-card__inner"><img class="result-card__image js-lazy" src="index.html" alt="Дарья" data-src="/static/img/results_2.jpg" width="224" height="224">
+                  <div class="result-card__content">
+                    <div class="result-card__name">Дарья</div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head gray">Ниша:</div>
+                      <div class="result-card__cell-body">Обучение наращиванию ресниц</div>
+                    </div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head gray">Формат</div>
+                      <div class="result-card__cell-body">Онлайн-школа</div>
+                    </div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head red">Результат</div>
+                      <div class="result-card__cell-body">1670 заявок на&nbsp;вебинар по&nbsp;11&nbsp;рублей за&nbsp;11&nbsp;дней</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-card">
+                <div class="result-card__inner"><img class="result-card__image js-lazy" src="index.html" alt="Дмитрий" data-src="/static/img/results_3.jpg" width="224" height="224">
+                  <div class="result-card__content">
+                    <div class="result-card__name">Дмитрий</div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head gray">Ниша:</div>
+                      <div class="result-card__cell-body">Коучинг для мужчин</div>
+                    </div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head gray">Формат</div>
+                      <div class="result-card__cell-body">Оффлайн курс в&nbsp;Таллинне, Эстония</div>
+                    </div>
+                    <div class="result-card__cell">
+                      <div class="result-card__cell-head red">Результат</div>
+                      <div class="result-card__cell-body">Привели клиентов на&nbsp;сумму 20&nbsp;000 евро за&nbsp;месяц</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <p class="lead">Рост есть, но&nbsp;слишком медленный</p>
+        </div>
+      </div>
+    </section>
+    <section id="s-specialization">
+      <div class="container">
+        <div class="specialization">
+          <div class="specialization__header">
+            <div class="specialization__col">
+              <h2 class="specialization__title title-w-circle circle-gray">
+                <span>Берем вопросы продвижения<br>
+                  и&nbsp;продаж на&nbsp;себя</span>
+              </h2>
+              <div class="specialization__subtitle">Мы&nbsp;специализируемся на&nbsp;продвижении с&nbsp;помощью онлайн-инструментов</div>
             </div>
-            <div class="col-6">
-              <p class="lead">Работаете больше, а&nbsp;результатов не&nbsp;прибавляется</p>
+            <div class="specialization__col numbers-wrap">
+              <div class="numbers">
+                <div class="number">
+                  <div class="number__main">3</div>
+                  <div class="number__subtitle">года на&nbsp;рынке</div>
+                </div>
+                <div class="number">
+                  <div class="number__main">200</div>
+                  <div class="number__subtitle">и&nbsp;более проектов</div>
+                </div>
+                <div class="number">
+                  <div class="number__main">20</div>
+                  <div class="number__subtitle">сотрудников</div>
+                </div>
+                <div class="number">
+                  <div class="number__main">25</div>
+                  <div class="number__subtitle">ниш</div>
+                </div>
+                <div class="number">
+                  <div class="number__main">12</div>
+                  <div class="number__subtitle">наборов услуг</div>
+                </div>
+                <div class="number">
+                  <div class="number__main">100</div>
+                  <div class="number__subtitle">дополнительных инструментов</div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="row mt-4">
-            <div class="col-6">
-              <h2>Привлекать<br>агентства</h2>
+          <div class="specialization__text">
+            <span>Над каждым проектом трудится отдельная команда, свой клиент-менеджер и&nbsp;маркетолог, полностью погруженный в&nbsp;продукт</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="s-testimonials">
+      <div class="container">
+        <div class="testimonials">
+          <h2 class="testimonials__header">Нас благодарят</h2>
+          <div class="testimonials__content-wrap">
+            <div class="testimonials__content">
+              <div class="testimonials__item testimonials__item--small">
+                <iframe width="255" height="453" src="index.html" data-src="https://www.youtube.com/embed/cJ23x9NanzI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="js-lazy"></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--small">
+                <iframe width="255" height="453" src="index.html" data-src="https://www.youtube.com/embed/57UtM9qi5PY" class="js-lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--small">
+                <iframe width="255" height="453" src="index.html" data-src="https://www.youtube.com/embed/pfUpW56MP8w" class="js-lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--small">
+                <iframe width="255" height="453" src="index.html" data-src="https://www.youtube.com/embed/dDQJejohljY" class="js-lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--large">
+                <iframe width="350" height="197" src="index.html" data-src="https://www.youtube.com/embed/Jv5yAr6vPUo" class="js-lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--large">
+                <iframe width="350" height="197" src="index.html" data-src="https://www.youtube.com/embed/Yxmrz76X1G0" class="js-lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--large">
+                <iframe width="350" height="197" src="index.html" data-src="https://www.youtube.com/embed/QTFuUiU3c7Y" class="js-lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
             </div>
-            <div class="col-6">
-              <h2>Обращаться<br>в&nbsp;продюсерские центры</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <ul>
-                <li>Берут много денег вперед, а&nbsp;объем работ строго ограничен договором</li>
-                <li>Зарабатывают на&nbsp;комиссии с&nbsp;рекламы</li>
-                <li>Зарабатывают на&nbsp;выполненных работах, а&nbsp;не&nbsp;на&nbsp;ваших результатах</li>
-              </ul>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>Не&nbsp;со&nbsp;всеми готовы работать</li>
-                <li>Услуги стоят дорого</li>
-                <li>Много требований к&nbsp;экспертам</li>
-                <li>Могут загрузить вас работой по&nbsp;продвижению еще больше</li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <p class="lead">Услуги стоят дорого, а&nbsp;заявки не&nbsp;переходят в&nbsp;продажи</p>
-            </div>
-            <div class="col-6">
-              <p class="lead">Берут&nbsp;80% прибыли себе</p>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- mobile -->
-
-    <div class="row d-md-none">
-      <div class="col-md-6 mb-3">
-        <h2>Продвигаться самостоятельно</h2>
-        <ul>
-          <li>Тратите время и&nbsp;деньги на&nbsp;курсы по&nbsp;продвижению вместо дальнейшего развития своих сильных сторон</li>
-          <li>Вы&nbsp;тратите время на&nbsp;то, что не&nbsp;умеете</li>
-          <li>Теряете деньги, работая не&nbsp;как эксперт</li>
-        </ul>
-        <p class="lead">Рост есть, но&nbsp;слишком медленный</p>
-      </div>
-      <div class="col-md-6 mb-3">
-        <h2>Нанимать фрилансеров</h2>
-        <ul>
-          <li>Теряете время на&nbsp;сбор команды, управление и&nbsp;контроль</li>
-          <li>Теряете деньги на&nbsp;непрофессионалов и&nbsp;мошенников</li>
-          <li>Теряете деньги и&nbsp;время на&nbsp;поиски рабочей модели продвижения</li>
-        </ul>
-        <p class="lead">Работаете больше, а&nbsp;результатов не&nbsp;прибавляется</p>
-      </div>
-      <div class="col-md-6 mb-3">
-        <h2>Привлекать агентства</h2>
-        <ul>
-          <li>Берут много денег вперед, а&nbsp;объем работ строго ограничен договором</li>
-          <li>Зарабатывают на&nbsp;комиссии с&nbsp;рекламы</li>
-          <li>Зарабатывают на&nbsp;выполненных работах, а&nbsp;не&nbsp;на&nbsp;ваших результатах</li>
-        </ul>
-        <p class="lead">Услуги стоят дорого, а&nbsp;заявки не&nbsp;переходят в&nbsp;продажи</p>
-      </div>
-      <div class="col-md-6 mb-3">
-        <h2>Обращаться в&nbsp;продюсерские центры</h2>
-        <ul>
-          <li>Не&nbsp;со&nbsp;всеми готовы работать</li>
-          <li>Услуги стоят дорого</li>
-          <li>Много требований к&nbsp;экспертам</li>
-          <li>Могут загрузить вас работой по&nbsp;продвижению еще больше</li>
-        </ul>
-        <p class="lead">Берут&nbsp;80% прибыли себе</p>
-      </div>
-    </div>
-
-    <h2 class="text-center mt-5">Деньги и&nbsp;время уходят, а&nbsp;результата нет</h2>
-  </div>
-</div>
-
-<div class="block my-5 py-5" id="case">
-  <div class="container">
-    <h1 class="text-center">Мы&nbsp;помогаем достичь цели<br class="d-none d-md-block"> и&nbsp;берем часть инвестиций на&nbsp;себя&nbsp;</h1>
-    <p class="lead text-center mb-5">Мы гордимся результатами своих клиентов</p>
-
-    <table class="table table-sm d-none d-md-block">
-      <tr>
-        <th class="border-top-0">
-          <img class="img-fluid border" src="/images/partners/mikhail.jpg">
-        </th>
-        <th class="border-top-0">
-          <img class="img-fluid border" src="/images/partners/daria.jpg">
-        </th>
-        <th class="border-top-0">
-          <img class="img-fluid border" src="/images/partners/dmitri.jpg">
-        </th>
-      </tr>
-      <tr>
-        <td class="border-top-0"><small>Имя</small><br>Михаил</td>
-        <td class="border-top-0"><small>Имя</small><br>Дарья</td>
-        <td class="border-top-0"><small>Имя</small><br>Дмитрий</td>
-      </tr>
-      <tr>
-        <td><small>Ниша</small><br>Обучение массажу</td>
-        <td><small>Ниша</small><br>Обучение наращиванию ресниц</td>
-        <td><small>Ниша</small><br>Коучинг для мужчин</td>
-      </tr>
-      <tr>
-        <td><small>Формат</small><br>Тренинги в&nbsp;Москве, Питере, Калининграде и&nbsp;Архангельске</td>
-        <td><small>Формат</small><br>Онлайн-школа</td>
-        <td><small>Формат</small><br>Оффлайн курс в&nbsp;Таллинне, Эстония</td>
-      </tr>
-      <tr>
-        <td><small>Результат</small><br>Собрали 5&nbsp;тренингов с&nbsp;прибылью в&nbsp;1&nbsp;000&nbsp;000 рублей</td>
-        <td><small>Результат</small><br>1670 заявок на&nbsp;вебинар по&nbsp;11&nbsp;рублей за&nbsp;11&nbsp;дней</td>
-        <td><small>Результат</small><br>Привели клиентов на&nbsp;сумму 20&nbsp;000&nbsp;евро за&nbsp;месяц</td>
-      </tr>
-    </table>
-
-    <div class="d-md-none">
-      <div class="row mb-4">
-        <div class="col-sm-6 mb-2">
-          <img class="img-fluid border" src="/images/partners/mikhail.jpg">
-        </div>
-        <div class="col-sm-6">
-          <b>Михаил, обучение массажу</b>
-          <br><small class="text-muted">Формат</small><br>Тренинги в&nbsp;Москве, Питере, Калининграде и&nbsp;Архангельске
-          <br><small class="text-muted">Результат</small><br>Собрали 5&nbsp;тренингов с&nbsp;прибылью в&nbsp;1&nbsp;000&nbsp;000 рублей
+    </section>
+    <section id="s-offer">
+      <div class="container">
+        <div class="offer">
+          <h2 class="offer__header title-w-circle circle-brown-light">
+            <span>Начнем работать?</span>
+          </h2>
+          <a class="button_red offer__button" href="index.html#s-buy" data-smooth>Заказать разработку стратегии</a>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col-sm-6 mb-2">
-          <img class="img-fluid border" src="/images/partners/daria.jpg">
-        </div>
-        <div class="col-sm-6">
-          <b>Дарья, обучение наращиванию ресниц</b>
-          <br><small class="text-muted">Формат</small><br>Онлайн-школа
-          <br><small class="text-muted">Результат</small><br>1670 заявок на&nbsp;вебинар по&nbsp;11&nbsp;рублей за&nbsp;11&nbsp;дней
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col-sm-6 mb-2">
-          <img class="img-fluid border" src="/images/partners/dmitri.jpg">
-        </div>
-        <div class="col-sm-6">
-          <b>Дмитрий, коучинг для мужчин</b>
-          <br><small class="text-muted">Формат</small><br>Оффлайн курс в&nbsp;Таллинне, Эстония
-          <br><small class="text-muted">Результат</small><br>Привели клиентов на&nbsp;сумму 20&nbsp;000&nbsp;евро за&nbsp;месяц
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5" id="terms">
-  <div class="container">
-    <h1 class="text-center">Мы&nbsp;предлагаем партнерство или &laquo;партнерство&raquo;?</h1>
-    <p class="lead text-center mb-5">Сравните условия работы</p>
-
-    <!-- desktop -->
-
-    <div class="d-none d-md-block">
-      <div class="row">
-        <div class="col-6">
-          <h2>Обычный продюсерский центр</h2>
-        </div>
-        <div class="col-6">
-          <h2>Наш продюсерский центр</h2>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-6">
-          <h4>Инвестируют они</h4>
-          <ul class="nobullet-xs">
-            <li>Деньги в&nbsp;создание системы привлечения клиентов</li>
-            <li>Рекламный бюджет</li>
-            <li>Опыт продвижения, знание как обеспечить результат</li>
-            <li>Проверенная команда исполнителей</li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <h4>Мы&nbsp;инвестируем</h4>
-          <ul class="nobullet-xs">
-            <li>Опыт продвижения, знание как обеспечить результат</li>
-            <li>Проверенная команда исполнителей</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-6">
-          <h4>Инвестируете вы</h4>
-          <ul class="nobullet-xs">
-            <li>Ваша экспертность</li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <h4>Вы&nbsp;инвестируете</h4>
-          <ul class="nobullet-xs">
-            <li>Деньги в&nbsp;создание системы привлечения клиентов (себестоимость, только работа исполнителей)</li>
-            <li>Рекламный бюджет</li>
-            <li>Ваша экспертность</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-6">
-          <p><small>Они получают</small><br>80% прибыли</p>
-          <p><small>Вы&nbsp;получаете</small><br>20% прибыли</p>
-        </div>
-        <div class="col-6">
-          <p><small>Мы&nbsp;получаем</small><br>30% прибыли</p>
-          <p><small>Вы&nbsp;получаете</small><br>70% прибыли</p>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-6">
-          <p class="mb-0 text-center">Ваш реальный доход<br>может быть</p>
-          <p class="lead text-center">3-5% от&nbsp;суммы продаж</p>
-        </div>
-        <div class="col-6">
-          <p class="mb-0 text-center">Ваш реальный доход<br>в&nbsp;среднем будет</p>
-          <p class="lead text-center">40-50% от&nbsp;суммы продаж</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- mobile -->
-
-    <div class="d-md-none">
-      <h2>Обычный продюсерский центр</h2>
-      <h4>Инвестируют они</h4>
-      <ul class="nobullet-xs">
-        <li>Деньги в&nbsp;создание системы привлечения клиентов</li>
-        <li>Рекламный бюджет</li>
-        <li>Опыт продвижения, знание как обеспечить результат</li>
-        <li>Проверенная команда исполнителей</li>
-      </ul>
-      <h4>Инвестируете вы</h4>
-      <ul class="nobullet-xs">
-        <li>Ваша экспертность</li>
-      </ul>
-      <p><small>Они получают</small><br>80% прибыли</p>
-      <p><small>Вы&nbsp;получаете</small><br>20% прибыли</p>
-      <p class="mb-0 text-center">Ваш реальный доход<br>может быть</p>
-      <p class="lead text-center">3-5% от&nbsp;суммы продаж</p>
-
-      <h2 class="mt-5">Наш продюсерский центр</h2>
-      <h4>Мы&nbsp;инвестируем</h4>
-      <ul class="nobullet-xs">
-        <li>Опыт продвижения, знание как обеспечить результат</li>
-        <li>Проверенная команда исполнителей</li>
-      </ul>
-      <h4>Вы&nbsp;инвестируете</h4>
-      <ul class="nobullet-xs">
-        <li>Деньги в&nbsp;создание системы привлечения клиентов (себестоимость, только работа исполнителей)</li>
-        <li>Рекламный бюджет</li>
-        <li>Ваша экспертность</li>
-      </ul>
-      <p><small>Мы&nbsp;получаем</small><br>30% прибыли</p>
-      <p><small>Вы&nbsp;получаете</small><br>70% прибыли</p>
-      <p class="mb-0 text-center">Ваш реальный доход<br>в&nbsp;среднем будет</p>
-      <p class="lead text-center">40-50% от&nbsp;суммы продаж</p>
-    </div>
-
-  </div>
-</div>
-
-<div class="block my-5 py-5" id="warranty">
-  <div class="container">
-    <h1 class="text-center">Гарантируем количество, качество<br class="d-none d-md-block"> и&nbsp;низкую стоимость заявки</h1>
-    <p class="lead text-center mb-5">Приводим достаточное количество клиентов<br class="d-none d-md-block d-lg-none"> по&nbsp;рентабельной цене,<br class="d-none d-lg-block"> или переделываем сайты<br class="d-none d-md-block d-lg-none"> и&nbsp;рекламные кампании за&nbsp;свой счет</p>
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center">Как все будет происходить</h1>
-
-    <div class="row mt-5">
-      <div class="col-lg-8 offset-lg-2">
-        <h2>1. Разработка стратегии продвижения</h2>
-        <p>Первый обязательный шаг для начала работы с&nbsp;нами.</p>
-        <p>Стратегию можно реализовать самостоятельно, а&nbsp;можно доверить нам.</p>
-        <p><span class="text-muted">Стоимость:</span> $390
-        <br><span class="text-muted">Затраты времени:</span> 5&nbsp;рабочих дней
-        <br><span class="text-muted">Результат:</span> проверка проекта, проектирование воронки продаж, расчет рекламного бюджета, смета, расчет прибыльности</p>
-        <!--p class="lead">При оплате на&nbsp;сайте действует специальная цена $349</p-->
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-lg-8 offset-lg-2">
-        <h2>2. Создание и&nbsp;тестирование системы привлечения клиентов</h2>
-        <p>Возможен партнерский вариант с&nbsp;оплатой разработки лендингов по&nbsp;себестоимости и&nbsp;выделением рекламного бюджета. Итоговая стоимость и&nbsp;рекламный бюджет по&nbsp;результатам разработки стратегии</p>
-        <p><span class="text-muted">Полная стоимость:</span> от&nbsp;$5000 + рекламный бюджет, всю прибыль оставляете себе
-        <br><span class="text-muted">Стоимость (при партнерстве):</span> от&nbsp;$1000 + рекламный бюджет + 30% от прибыли
-        <br><span class="text-muted">Затраты времени:</span> от&nbsp;2&nbsp;недель
-        <br><span class="text-muted">Результат:</span> проверенная работающая воронка продаж, первые клиенты и&nbsp;прибыль</p>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-lg-8 offset-lg-2">
-        <h2>3. Новые клиенты и&nbsp;дальнейший рост</h2>
-        <p>Приводим вам новых клиентов и&nbsp;помогаем запускать новые продукты</p>
-        <p><span class="text-muted">Стоимость:</span> себестоимость ведения рекламы + рекламный бюджет + 30%&nbsp;от&nbsp;прибыли
-        <br><span class="text-muted">Результат:</span> новые клиенты, новые продажи существующим клиентам</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center mb-5">Помогаем конвертировать заявки в&nbsp;продажи</h1>
-
-    <div class="row">
-      <div class="col-md-5 py-3 bg-sad">
-        <h1 class="mb-0">Вы&nbsp;делали запуск</h1>
-        <p class="lead">самостоятельно, с&nbsp;привлеченным специалистом или с&nbsp;помощью интернет агентства</p>
-        <h2>Заявки были<br>Продаж не&nbsp;было</h2>
-      </div>
-      <div class="col-md-7 py-3">
-        <h2 class="mb-3">С&nbsp;нами продажи будут потому что:</h2>
-        <div class="row">
-          <div class="col-sm-6 my-3">
-            <h4>Выделим лид-менеджера</h4>
-            <p>Он&nbsp;будет обрабатывать заявки и&nbsp;назначать время консультации с&nbsp;экспертом</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4>Дадим план продающей консультации, вебинара, мастер-класса</h4>
-            <p>Вы&nbsp;проведете&nbsp;то, что вам удобно, по&nbsp;готовой структуре</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4>Предоставим менеджера по&nbsp;продажам</h4>
-            <p>Он&nbsp;будет звонить всем, кто оставил заявку, и&nbsp;дожимать их&nbsp;&mdash; обрабатывать возражения и&nbsp;доводить до&nbsp;оплаты</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4>Предоставим скрипт обработки заявок</h4>
-            <p>Если решите продавать самостоятельно</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4 class="mb-0">Подарим обучающий курс</h4>
-            <p>по&nbsp;продажам на&nbsp;вебинарах и&nbsp;консультациях</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4 class="mb-0">Подарим консультацию</h4>
-            <p>с&nbsp;коучем по&nbsp;продажам</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4>Отправим на&nbsp;ваш вебинар специалиста по&nbsp;продажам на&nbsp;вебинарах</h4>
-            <p>Он&nbsp;даст обратную связь, как продаёте и&nbsp;рекомендации как улучшить продажи</p>
-          </div>
-          <div class="col-sm-6 my-3">
-            <h4>Отправим тайного покупателя на&nbsp;вашу консультацию</h4>
-            <p>Он&nbsp;даст развёрнутую обратную связь и&nbsp;рекомендации, что надо улучшить</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center mb-3">Вариант системы привлечения клиентов выглядит так</h1>
-
-    <div class="row">
-      <div class="col-12 col-lg-6" >
-        <img src="/images/funnel.png">
-      </div>
-      <div class="col-12 col-lg-6 mt-3">
-        <ul>
-          <li>Одностраничный сайт (лендинг) под бесплатный продукт</li>
-          <li>Одностраничный сайт (лендинг) под основной продукт</li>
-          <li>Две страницы &laquo;Спасибо&raquo;</li>
-          <li>Пять вариантов заголовка для лидмагнита</li>
-          <li>Файл лидмагнита [PDF]</li>
-          <li>Страница оплаты</li>
-          <li>Чат-бот в&nbsp;Фейсбук мессенджере + тексты сообщений для бота</li>
-          <li>CRM-система</li>
-          <li>Пять прогревающих писем для воронки (или план для 5&nbsp;прогревающих видео)</li>
-          <li>Пять дожимающих писем для воронки (или план для 5&nbsp;дожимающих видео)</li>
-          <li>План продающей консультации, вебинара, мастер-класса (если нужно)</li>
-          <li>Скрипт прозвона заявок (если нужно)</li>
-        </ul>
-      </div>
-    </div>
-    <p class="lead text-center">Как будет выглядеть ваш вариант, будет понятно после разработки стратегии</p>
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center">4&nbsp;проверенные стратегии</h1>
-    <p class="lead text-center mb-5">С&nbsp;их&nbsp;помощью мы&nbsp;успешно запустили более 200 проектов</p>
-
-    <div class="row">
-      <div class="col-12 col-md-5 mb-4">
-        <p>Мы&nbsp;специализируемся на&nbsp;продвижении экспертов, и&nbsp;выстроим вам систему привлечения клиентов, используя&nbsp;то, что уже проверено и&nbsp;точно работает.</p>
-        <p>Мы&nbsp;подберем подходящую вам проверенную гарантированно работающую стратегию, адаптируем ее&nbsp;под особенности вашего продукта и&nbsp;ваши особенности как эксперта, усилим необходимыми дополнительными инструментами</p>
-        <ul>
-          <li>4&nbsp;проверенные стратегии</li>
-          <li>3&nbsp;варианта стоимости для каждой</li>
-          <li>100 дополнительных инструментов</li>
-          <li>10&nbsp;000+ вариантов решений</li>
-        </ul>
-      </div>
-      <div class="col-12 col-md-7">
-        <div class="row">
-          <div class="col-sm-6">
-            <h4 class="mb-2">1.&nbsp;Монетизируй экспертность</h4>
-            <p>Упакуем экспертность в&nbsp;боксовый продукт, создадим бренд и&nbsp;автоматизируем продажи</p>
-          </div>
-          <div class="col-sm-6">
-            <h4 class="mb-2">2.&nbsp;Билл Гейтс</h4>
-            <p>Создадим бренд компании, автоматизируем и&nbsp;масштабируем продажи</p>
-          </div>
-          <div class="col-sm-6">
-            <h4 class="mb-2">3.&nbsp;Тони Роббинс</h4>
-            <p>Создадим бренд личности и&nbsp;популяризируем его</p>
-          </div>
-          <div class="col-sm-6">
-            <h4 class="mb-2">4.&nbsp;Инфобизнесмен</h4>
-            <p>Создадим боксовый, упакованный продукт и&nbsp;автоматизируем все процессы: от&nbsp;привлечения трафика до&nbsp;повторных продаж</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p class="lead text-center mt-4">Среди 10&nbsp;000 вариантов решений можно попытаться<br class="d-none d-md-block"> найти результативный вариант самостоятельно.<br class="d-none d-md-block"> Мы&nbsp;найдем гарантированно</p>
-  </div>
-</div>
-
-<script type="text/javascript">
-  $(function() {
-    $(".clickable-doc").click(function(){
-      $('#doc-top').attr('src', $(this).attr('src'));
-      $('.clickable-doc.active').removeClass('active');
-      $(this).addClass('active');
-    })
-  });
-</script>
-
-<div class="block my-5 py-5" id="order">
-  <div class="container">
-    <h1 class="text-center">Начнем с&nbsp;разработки стратегии продвижения</h1>
-    <p class="lead text-center mb-5">Это необходимо, чтобы свести риски к&nbsp;минимуму</p>
-
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-5" style="background: #f2f2f2;">
-        <div class="row mt-3">
-          <div class="col"><img src="/images/docs/1-min.jpg" class="clickable-doc active"></div>
-          <div class="col"><img src="/images/docs/2-min.jpg" class="clickable-doc"></div>
-          <div class="col"><img src="/images/docs/3-min.jpg" class="clickable-doc"></div>
-          <div class="col"><img src="/images/docs/4-min.jpg" class="clickable-doc"></div>
-        </div>
-        <img src="/images/docs/1-min.jpg" id="doc-top">
-      </div>
-      <div class="col-12 col-md-6 col-lg-7">
-        <div class="d-md-none mt-4"></div>
-        <h2>В&nbsp;стратегию входит</h2>
-        <h4>Пошаговый план, как привлекать больше клиентов</h4>
-        <ul>
-          <li>Разрабатываем концепт (УТП + логика презентации&nbsp;/ позиционирование)</li>
-          <li>Находим платежеспособную целевую аудиторию</li>
-          <li>Создаем логику презентации проекта для потенциального клиента</li>
-          <li>Разрабатываем коммуникационную стратегию и&nbsp;воронку продаж</li>
-        </ul>
-        <h4>Смета работ</h4>
-        <ul>
-          <li>Подбор необходимых инструментов</li>
-          <li>Три варианта стоимости: эконом, стандарт, премиум</li>
-        </ul>
-        <h4>Расчет прибыльности проекта</h4>
-        <ul>
-          <li>Финансовый план запуска</li>
-          <li>Расчет рекламного бюджета</li>
-          <li>Подбор жизнеспособной бизнес-модели</li>
-          <li>Анализ рисков и&nbsp;развития негативного сценария</li>
-        </ul>
-        <div class="row mt-4">
-          <div class="col">
-            <!--p class="text-center mb-0">При оплате<br> на&nbsp;сайте</p-->
-            <p class="lead text-center">Стоимость $390</p>
-            <a class="btn btn-red btn-lg mt-0 btn-block" href="https://secure.wayforpay.com/button/b31b600394ff9">Купить</a>
-          </div>
-          <!--div class="col">
-            <p class="text-center mb-0">При покупке<br> через менеджера</p>
-            <p class="lead text-center mb-1">390 долларов</p>
-            <p><button class="btn btn-block btn-secondary">Заказать консультацию</button></p>
-          </div-->
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center"><img src="/images/check-alt.svg" width="50"></p>
-        <p class="text-center">Реализовать стратегию можете своими силами или нашими</p>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center"><img src="/images/check-alt.svg" width="50"></p>
-        <p class="text-center">100% запусков с&nbsp;нами начинаются с&nbsp;этого шага</p>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center"><img src="/images/check-alt.svg" width="50"></p>
-        <p class="text-center">98% клиентов доверяют реализацию стратегии нам</p>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center"><img src="/images/check-alt.svg" width="50"></p>
-        <p class="text-center">186&nbsp;000 рублей &mdash; средняя экономия клиента на&nbsp;дальнейшем продвижении</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center">Получили прибыль для более чем 200 клиентов</h1>
-    <p class="lead text-center mb-5">Имеем опыт в&nbsp;десятках ниш. Основные:</p>
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-3">
-        <ul class="nobullet-xs">
-          <li>Продажи</li>
-          <li>Менеджмент</li>
-          <li>Управление бизнесом</li>
-          <li>Недвижимость</li>
-          <li>Инвестиции</li>
-        </ul>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <ul class="nobullet-xs">
-          <li>Психология</li>
-          <li>Отношения</li>
-          <li>Лайф коучинг</li>
-          <li>Личностный рост</li>
-          <li>Иностранные языки</li>
-        </ul>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <ul class="nobullet-xs">
-          <li>Фитнес</li>
-          <li>Единоборства</li>
-          <li>Медитации</li>
-          <li>Похудение</li>
-          <li>Массаж</li>
-        </ul>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <ul class="nobullet-xs">
-          <li>Сетевой бизнес</li>
-          <li>Мода и&nbsp;стиль</li>
-          <li>Красота</li>
-          <li>Воспитание детей</li>
-          <li>Знакомства</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5" id="about">
-  <div class="container">
-    <h1 class="text-center">Берем вопросы продвижения и&nbsp;продаж на&nbsp;себя</h1>
-    <p class="lead text-center mb-5">Мы&nbsp;продюсерский центр, специализируемся на&nbsp;продвижении экспертов с&nbsp;помощью онлайн-инструментов</p>
-
-    <div class="row">
-      <div class="col-sm-4">
-        <h1 class="mb-0 text-center">3</h1>
-        <p class="text-center">года на&nbsp;рынке</p>
-      </div>
-      <div class="col-sm-4">
-        <h1 class="mb-0 text-center">200</h1>
-        <p class="text-center">и&nbsp;более проектов</p>
-      </div>
-      <div class="col-sm-4">
-        <h1 class="mb-0 text-center">20</h1>
-        <p class="text-center">ниш</p>
-      </div>
-      <div class="col-sm-4">
-        <h1 class="mb-0 text-center">25</h1>
-        <p class="text-center">сотрудников</p>
-      </div>
-      <div class="col-sm-4">
-        <h1 class="mb-0 text-center">12</h1>
-        <p class="text-center">наборов услуг</p>
-      </div>
-      <div class="col-sm-4">
-        <h1 class="mb-0 text-center">100</h1>
-        <p class="text-center">дополнительных инструментов</p>
-      </div>
-    </div>
-    
-    <p class="lead text-center">Над каждым проектом трудится отдельная команда, свой клиент-менеджер и&nbsp;маркетолог, полностью погруженный в&nbsp;продукт</p>
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center">Прошел путь от&nbsp;коучинга к&nbsp;продвижению коучей</h1>
-    <p class="lead text-center mb-5">Личная история основателя продюсерского центра</p>
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <p>В&nbsp;прошлом я&nbsp;тренер. Раньше я&nbsp;не&nbsp;разбирался в&nbsp;маркетинге так глубоко, а&nbsp;только тренировал. Но&nbsp;тренировать полтора человека мне не&nbsp;хотелось, поэтому я&nbsp;начал искать продюсеров.</p>
-        <p>Почти все продюсеры либо хотели 150-300 тысяч рублей вперед, либо&nbsp;80% от&nbsp;прибыли. Либо предлагали научить меня продвигаться самостоятельно, и&nbsp;смотрели на&nbsp;меня сверху вниз, и&nbsp;говорили: &laquo;у&nbsp;тебя неактивный паблик&raquo;, &laquo;твой лендинг не&nbsp;конвертирует&raquo;, &laquo;твоё предложение недостаточно хорошее&raquo;. Поэтому вместо того, чтобы зарабатывать, я&nbsp;только расстраивался.</p>
-        <p>Тогда я&nbsp;сам начал разбираться и&nbsp;получил неплохие результаты:</p>
-        <ul>
-          <li>выпустил 3&nbsp;книги</li>
-          <li>выступал на&nbsp;1&nbsp;и&nbsp;5&nbsp;канале, на&nbsp;ТНТ, СТС и&nbsp;Пятнице в&nbsp;России, 1+1, ТЕТ, СТБ в&nbsp;Украине</li>
-          <li>снял 2&nbsp;сезона реалити-подкаста про достижение людьми своих целей в&nbsp;бизнесе</li>
-          <li>провёл тренинги в&nbsp;24&nbsp;городах 8&nbsp;стран мира</li>
-          <li>собрал мастер-класс в&nbsp;Перми на&nbsp;1000 человек</li>
-          <li>упаковал 150 тренеров</li>
-        </ul>
-        <p>Я&nbsp;организовал компанию iCoach. Сначала мы&nbsp;привлекали клиентов только для тренеров и&nbsp;консультантов, но&nbsp;потом обнаружили, что наша концепция маркетинга идеально подходит практически для любого бизнеса. Поэтому я&nbsp;уверенно заявляю, что построю для тебя систему привлечения клиентов, чем&nbsp;бы ты&nbsp;ни&nbsp;занимался.</p>
-      </div>
-      <div class="col-12 col-md-6">
-        <p class="p-3 text-center"><img src="/images/nickvorobiov-rounded.jpg"></p>
-        <p class="text-center">Николай Воробьев</p>
-        <p class="font-italic">&laquo;Я&nbsp;обменял десятки тысяч слитых впустую долларов, миллионы нервных клеток и&nbsp;годы безуспешных попыток на&nbsp;бесценный опыт и&nbsp;навыки. И&nbsp;сегодня я&nbsp;хочу избавить вас от&nbsp;головной боли по&nbsp;поводу лендингов, рассылок, воронки продаж и&nbsp;прочей маркетинговой суеты. Мы&nbsp;возьмем все это на&nbsp;себя&raquo;</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5" id="reviews">
-  <div class="container">
-    <h1 class="text-center mb-5">Нас благодарят</h1>
-    <div class="row">
-      <div class="col-6 col-sm-4 col-lg-3 mb-2"><div class="embed-responsive embed-responsive-9by16"><iframe class="embed-responsive-item" width="360" height="640" src="https://www.youtube.com/embed/cJ23x9NanzI" frameborder="0" allowfullscreen></iframe></div></div>
-      <div class="col-6 col-sm-4 col-lg-3 mb-2"><div class="embed-responsive embed-responsive-9by16"><iframe class="embed-responsive-item" width="360" height="640" src="https://www.youtube.com/embed/57UtM9qi5PY" frameborder="0" allowfullscreen></iframe></div></div>
-      <div class="col-6 col-sm-4 col-lg-3 mb-2"><div class="embed-responsive embed-responsive-9by16"><iframe class="embed-responsive-item" width="360" height="640" src="https://www.youtube.com/embed/pfUpW56MP8w" frameborder="0" allowfullscreen></iframe></div></div>
-      <div class="col-6 col-sm-4 col-lg-3 mb-2 offset-sm-2 offset-lg-0"><div class="embed-responsive embed-responsive-9by16"><iframe class="embed-responsive-item" width="360" height="640" src="https://www.youtube.com/embed/dDQJejohljY" frameborder="0" allowfullscreen></iframe></div></div>
-      <div class="col-6 col-sm-4 col-lg-3 mb-2 d-none d-sm-block d-lg-none"><div class="embed-responsive embed-responsive-9by16"><iframe class="embed-responsive-item" width="360" height="640" src="https://www.youtube.com/embed/p6LeMJx6JOE" frameborder="0" allowfullscreen></iframe></div></div>
-    </div>
-    <div class="row">
-      <!--div class="col-6 mb-2"><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/p96mpiCNeHg" frameborder="0" allowfullscreen></iframe></div></div-->
-      <div class="col-12 col-sm-6 col-lg-4 mb-2"><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/Jv5yAr6vPUo" frameborder="0" allowfullscreen></iframe></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-2 d-sm-none d-lg-block"><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/Yxmrz76X1G0" frameborder="0" allowfullscreen></iframe></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-2"><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/QTFuUiU3c7Y" frameborder="0" allowfullscreen></iframe></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5" style="overflow-x: hidden;">
-  <div class="container">
-    <h1 class="text-center">Подведем итоги?</h1>
-    <p class="lead text-center mb-5">Сравните варианты продвижения</p>
-    <div style="overflow-x:auto;">
-      <table class="table compare table-sm">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Самостоятельно</th>
-            <th>Фрилансер</th>
-            <th>Интернет агентство </th>
-            <th>Продюсерский центр</th>
-            <th>Мы</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Специализируются на&nbsp;продвижении экспертов</td>
-            <td>Нет</td>
-            <td>Нет</td>
-            <td>Нет</td>
-            <td class="ok">Да</td>
-            <td class="ok">Да</td>
-          </tr>
-          <tr>
-            <td>Уровень профессионализма/знаний</td>
-            <td>Низкий</td>
-            <td>Низкий, редко средний</td>
-            <td>Средний</td>
-            <td class="ok">Высокий</td>
-            <td class="ok">Высокий</td>
-          </tr>
-          <tr>
-            <td>Затраты вашего времени</td>
-            <td>Большие</td>
-            <td>Средние</td>
-            <td class="ok">Низкие</td>
-            <td class="ok">Низкие</td>
-            <td class="ok">Низкие</td>
-          </tr>
-          <tr>
-            <td>Риск потерять предоплату</td>
-            <td class="ok">Нет</td>
-            <td>Высокий</td>
-            <td class="ok">Нет</td>
-            <td class="ok">Нет</td>
-            <td class="ok">Нет</td>
-          </tr>
-          <tr>
-            <td>Риск сорванных сроков</td>
-            <td>Средний</td>
-            <td>Средний</td>
-            <td>Средний</td>
-            <td class="ok">Низкий</td>
-            <td class="ok">Низкий</td>
-          </tr>
-          <tr>
-            <td>Риск &laquo;слить&raquo; рекламный бюджет впустую</td>
-            <td>Высокий</td>
-            <td>Средний</td>
-            <td>Высокий</td>
-            <td class="ok">Нет</td>
-            <td class="ok">Нет</td>
-          </tr>
-          <tr>
-            <td>Помощь в&nbsp;конверсии лидов в&nbsp;продажи</td>
-            <td>Нет</td>
-            <td>Нет</td>
-            <td>Нет</td>
-            <td class="ok">Да</td>
-            <td class="ok">Да</td>
-          </tr>
-          <tr>
-            <td>Количество клиентов</td>
-            <td>Как повезет</td>
-            <td>Как повезет</td>
-            <td>Как повезет</td>
-            <td>Среднее</td>
-            <td class="ok">Сколько просили</td>
-          </tr>
-          <tr>
-            <td>Объем продаж</td>
-            <td>Как повезет</td>
-            <td>Как повезет</td>
-            <td>Как повезет</td>
-            <td class="ok">Высокий</td>
-            <td class="ok">Высокий</td>
-          </tr>
-          <tr>
-            <td>Ваша прибыль&nbsp;/ ваш доход</td>
-            <td>Как повезет</td>
-            <td>Как повезет</td>
-            <td>Как повезет</td>
-            <td>Низкий</td>
-            <td class="ok">Высокий</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<div class="block my-5 py-5">
-  <div class="container">
-    <h1 class="text-center mb-5">Начнем работать?</h1>
-    <p class="text-center"><a href="#order" class="btn btn-red btn-lg">Заказать разработку стратегии</a></p>
-  </div>
-</div>
+    </section>
+  </main>
