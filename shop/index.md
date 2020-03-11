@@ -1,8 +1,7 @@
 ---
 layout: page
 permalink: /shop/
-title: pages.shop.page_title
-lead: pages.shop.lead
+title: Каталог продуктов
 ---
 
 # **Маркетинг**

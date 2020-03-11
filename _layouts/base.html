@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/default-extend.css">
   <link rel="stylesheet" href="/static/css/common.css">
-  <title>{% t title %}</title>
+  <title>{{ page.title }}</title>
   {% include facebook-pixel.html %}
 </head>
 
 <body>
   {{ content }}
-  {% translate_file footer.html %}
+  {% include footer.html %}
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="/static/libs/lazy-load.min.js"></script>
